@@ -1,0 +1,28 @@
+{
+  "name": "cy-auto-regression",
+  "version": "1.0.0",
+  "description": "Repo with all the regression tests",
+  "main": "index.js",
+  "scripts": {
+    "test:uiAutomation": "node_modules/cypress/bin/cypress run --env host='https://me-26783.dev.marginedge.com/' --headless --browser chrome",
+    "test:uiAutomationOrderReconMaster": "node_modules/cypress/bin/cypress run --env host='https://master.marginedge.com/' --spec cypress/integration/orderRecon  --headless --browser chrome",
+    "format": "prettier --write \"**/*.js\" \"**/*.json\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://psinha7891@bitbucket.org/marginedge/cy-auto-regression.git"
+  },
+  "author": "Prashant_Sinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/marginedge/cy-auto-regression/issues"
+  },
+  "homepage": "https://bitbucket.org/marginedge/cy-auto-regression#readme",
+  "devDependencies": {
+    "cypress": "12.12.0",
+    "cypress-file-upload": "5.0.8",
+    "cypress-terminal-report": "^5.3.0",
+    "cypress-xpath": "2.0.1",
+    "prettier": "3.0.0"
+  }
+}

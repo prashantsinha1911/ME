@@ -1,0 +1,60 @@
+{
+  "tenantName": "Wasabi Tysons",
+  "vendorName": "New Test Vendor",
+  "productName": "2oz Souffle Cup Lid",
+  "existingVendor": "Arrow",
+  "harry'sHoochVendor": "Harry's Hooch",
+  "invoiceNum": "newInvoiceN",
+  "customerName": "newCustomerN",
+  "vendorItemCode": "newVendorItemCode",
+  "vendorItem": "newVIitem",
+  "testProductName": "testProduct",
+  "testRecipeTypeName": "testRecipeType",
+  "testRecipeName": "testRecipe",
+  "restaurant": "Restaurant",
+  "email": "edge.testlab@gmail.com",
+  "package1": {
+    "name": "newPackage1",
+    "quantity": "1",
+    "ratio": "1",
+    "price": "11"
+  },
+  "package2": {
+    "name": "newPackage2",
+    "quantity": "1",
+    "ratio": "2",
+    "price": "22"
+  },
+  "noOfdueDays": 5,
+  "irAddress": {
+    "recipient": "irRecipient",
+    "addressLine1": "irAddressLine1",
+    "state": "Alabama",
+    "city": "irCity",
+    "zipCode": "54321",
+    "mobileNo": "1234512345"
+  },
+
+  "reconciliationAddress": {
+    "recipient": "reRecipient",
+    "addressLine1": "reAddressLine1",
+    "state": "reState",
+    "city": "reCity",
+    "zipCode": "re1234",
+    "mobileNo": "1212121212"
+  },
+  "parDefaultValue": 3.4,
+  "OHvalue": 1,
+  "weeklyParData": [8, 9, 10, 11, 12, 13, 14],
+  "vendorSetupURL": "https://help.marginedge.com/hc/en-us/articles/217888378-How-do-I-place-orders-directly-through-ME-",
+
+  "productData": {
+    "initialPrice": 70,
+    "packagingPriceInVI": 22,
+    "productUnit": "Kilogram",
+    "UnitAmount": 20,
+    "updatedPrice": 1.1,
+    "updatedRatio": 0.05
+  },
+  "paymentAccountName": "znewPaymentAcc"
+}

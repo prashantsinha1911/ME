@@ -1,0 +1,30 @@
+{
+  "mockEventData": {
+    "Records": [
+      {
+        "s3": {
+          "bucket": {
+            "name": "invoiceemail-marginedge-com"
+          },
+          "object": {
+            "key": "stage-manifest/1p2274h1p75usfl3fo9bq4uga6oddkifus69t801"
+          }
+        }
+      }
+    ]
+  },
+
+  "creditMode": {
+    "combined": "COMBINED",
+    "skipped": "SKIPPED"
+  },
+  "EDI_Processing": {
+    "No_EDI_Processing": "OFF",
+    "Process_Images_with_EDI_Backup": "DEFAULT",
+    "Process_EDI_No_Handwritten_Adjustments": "AUTO"
+  },
+  "EDI_Processing_Label": {
+    "No_EDI_Processing": "EDI Invoices are not yet available for this vendor",
+    "Pre_EDI_REQUEST": "Request EDI Invoices on the Vendor page"
+  }
+}

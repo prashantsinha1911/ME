@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    on-failure: ABORT
+    commands:
+      - npm install
+
+  build:
+    commands:
+      - npm run test:uiAutomation
+
+cache:
+  paths:
+    - node_modules/**/*
+
+artifacts:
+  files:
+    - cypress/screenshots/**/*
+    - cypress/videos/**/*
+  discard-paths: yes
