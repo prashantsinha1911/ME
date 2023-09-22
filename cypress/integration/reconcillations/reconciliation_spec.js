@@ -27,7 +27,7 @@ describe("Reconcillation Verification", () => {
     let emailIDV = "test" + utilObj.makeId() + "@gmail.com";
     utilObj.checkRestUnit(
       sanityTestData.defaultUnit,
-      sanityTestData.defaultUnit,
+      sanityTestData.defaultUnit
     );
     // go to vendors
     hamburgerMenuPageObj.goToVendor();
@@ -57,7 +57,7 @@ describe("Reconcillation Verification", () => {
       "Apple Juice",
       "Test",
       "4",
-      "40",
+      "40"
     );
     vendorItemPageObj.element.searchValue().type(vendorItemName);
     // assert the created vendor items
@@ -73,7 +73,7 @@ describe("Reconcillation Verification", () => {
     loginPageObjs.loginAs(creds.adminName, creds.password);
     utilObj.checkRestUnit(
       sanityTestData.defaultUnit,
-      sanityTestData.defaultUnit,
+      sanityTestData.defaultUnit
     );
     // go to place new order
     hamburgerMenuPageObj.goToPlaceOrders();

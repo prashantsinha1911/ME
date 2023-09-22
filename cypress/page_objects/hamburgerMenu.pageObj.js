@@ -53,7 +53,7 @@ class hamburgerMenuPage {
       cy.xpath(`//*[@href="#/accounting/vendorMapping"]//*[@role='button']`),
     paymentMapping: () =>
       cy.xpath(
-        `//*[@href="#/accounting/balanceSheetAccounts"]//*[@role='button']`,
+        `//*[@href="#/accounting/balanceSheetAccounts"]//*[@role='button']`
       ),
     exports: () =>
       cy.xpath(`//*[@href="#/accounting/invoices"]//*[@role='button']`),
@@ -95,7 +95,7 @@ class hamburgerMenuPage {
     postToAccounting: () => cy.xpath(`//button[@ng-click='postDate()']`),
     reconciliation: () =>
       cy.xpath(
-        `//*[@href='#/accounting/statement' or @href='#/accounting/todo']//*[@role='button']`,
+        `//*[@href='#/accounting/statement' or @href='#/accounting/todo']//*[@role='button']`
       ),
     salesEntries: () =>
       cy.xpath(`//*[@href='#/accounting/salesEntries']//*[@role='button']`),
@@ -160,7 +160,7 @@ class hamburgerMenuPage {
     newVendorItemTask: () => cy.get(`a[href='#/tasks?tab=newItems']`),
     vendorSetupItem: () => cy.xpath(`//div[contains(text(),'Vendor Setup')]`),
     bellIconVendorSetup: () => cy.get(`a[href="#/tasks?tab=vendorSetup"]`),
-    clickInvItem2: () => cy.xpath(`(//*[@class='ui-grid-row ng-scope'])[1]`),
+    clickInvItem2: () => cy.xpath(`(//*[@class='ui-grid-row ng-scope'])[1]`)
   };
 
   approveItem() {
@@ -288,7 +288,7 @@ class hamburgerMenuPage {
   }
   goToPlaceOrders() {
     this.element.placeNewOrder().click({
-      force: true,
+      force: true
     });
     cy.wait(3000);
   }
@@ -370,6 +370,13 @@ class hamburgerMenuPage {
   goToVendorItemsOnly() {
     this.element.vendorItem().should("be.visible").click();
   }
+  goToOrdersParent() {
+    this.element.OrdersParent().should("be.visible").click();
+    this.element.orderChild().should("be.visible").click();
+    cy.wait(3000);
+    orderPage.element.openDDForOrderStatus().should("be.visible");
+    orderPage.element.orderGrid().should("be.visible");
+  }
   goToCategories() {
     this.element.accountings().click();
     this.element.categories().click();
@@ -377,7 +384,7 @@ class hamburgerMenuPage {
   }
   goToPaymentMapping() {
     this.element.accountings().click({
-      force: true,
+      force: true
     });
     this.element.paymentMapping().click();
     this.element.accountings().click();
@@ -389,7 +396,7 @@ class hamburgerMenuPage {
   goToVendorMapping() {
     // this.element.accountings().click();
     this.element.vendorMapping().click({
-      force: true,
+      force: true
     });
     this.element.accountings().click();
   }
@@ -460,7 +467,7 @@ class hamburgerMenuPage {
 
   goToSetupVerification() {
     cy.intercept(`/api/performance/setupVerification*multiUnit=true*`).as(
-      "setupVerification",
+      "setupVerification"
     );
     this.element.setupVerification().should("be.visible").click();
     util_generic.checkTotalItems("@setupVerification");
@@ -514,7 +521,7 @@ class hamburgerMenuPage {
   }
   goToReconciliationReportSetup() {
     cy.intercept("/api/orderReconciliationSummaries/report*").as(
-      "reconciliationReport",
+      "reconciliationReport"
     );
     this.element.reconciliationReportSetupOp().click();
     cy.wait("@reconciliationReport");
@@ -570,7 +577,7 @@ class hamburgerMenuPage {
   }
   goToCompanyConfigCentral() {
     cy.intercept("/api/central/companyConceptConfigs*").as(
-      "companyConceptConfigs",
+      "companyConceptConfigs"
     );
     this.element.companyConfigCentral().should("be.visible").click();
     util_generic.checkTotalItems("@companyConceptConfigs");
@@ -595,6 +602,11 @@ class hamburgerMenuPage {
   goToExportChildAcc() {
     this.element.exports().should("be.visible").click();
     cy.wait(2000);
+  }
+  goToCentralCompConfigChild() {
+    cy.wait(1500);
+    this.element.centralOption().scrollIntoView();
+    this.element.companyConfigCentral().click();
   }
   goToSalesEntriesChildAcc() {
     this.element.salesEntries().should("be.visible").click();

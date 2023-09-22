@@ -4,8 +4,7 @@ class exportPage {
     selectRow: () => cy.get(`[ng-model="row.isSelected"]`),
     sendBtn: () => cy.get(`[ng-click="enqueue()"]`),
     selectAllReprt: () => cy.get(`[auto-close="outsideClick"]`),
-    selectAllCheck: () =>
-      cy.xpath(`(//*[@ng-click="changeViewBy($event)"])[1]`),
+    selectAllCheck: () => cy.xpath(`(//*[@ng-click="changeViewBy($event)"])[1]`)
   };
 
   exportInv(invoiceName) {

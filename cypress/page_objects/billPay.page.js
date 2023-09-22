@@ -16,7 +16,7 @@ class billPayPage {
     zipCodeField: () => cy.get(`#zip`),
     phoneNo: () => cy.get(`#phoneNum`),
     selectItem: () => cy.get(`.ui-select-choices-row-inner`),
-    vednorConfigureField: () => cy.xpath(`(//*[@role='gridcell'])[3]`),
+    vednorConfigureField: () => cy.xpath(`(//*[@role='gridcell'])[3]`)
   };
   // bill pay can be disabled without configuring first
   disableBillPay(vendorName) {

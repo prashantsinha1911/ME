@@ -20,7 +20,7 @@ class integrationPage {
       cy.xpath(`(//*[@aria-label="Select an Accounting System"])[1]`),
     selectQueueSuffix: () => cy.get(`[name='queueSuffix']`),
     mockSQSEventPath: () => cy.get(`#mockSqsEventPath`),
-    sendMockEventBtn: () => cy.get(`[ng-click='sendMockSqsEvent()']`),
+    sendMockEventBtn: () => cy.get(`[ng-click='sendMockSqsEvent()']`)
   };
 
   connectToIntacct() {
@@ -65,7 +65,7 @@ class integrationPage {
       .clear()
       .type(JSON.stringify(mockData), {
         parseSpecialCharSequences: false,
-        delay: 0,
+        delay: 0
       });
     cy.wait(1000);
     this.element.sendMockEventBtn().should("be.visible").click();

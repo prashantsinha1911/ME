@@ -22,17 +22,17 @@ class inventoryPage {
       cy.xpath(`(//*[@ng-hide="viewingSpecificInventoryDate"])[2]`),
     selectSavedItem: () =>
       cy.xpath(
-        `(//*[@col-container-name="'body'"]//*[@class='ui-grid-row ng-scope'])[1]`,
+        `(//*[@col-container-name="'body'"]//*[@class='ui-grid-row ng-scope'])[1]`
       ),
     reOpenBtn: () => cy.xpath(`//*[@ng-click='reopen()']`),
     confirmationBtn: () =>
       cy.xpath(
-        `//*[contains(@style,'display: block')]//*[@class="btn btn-primary bootbox-accept"]`,
+        `//*[contains(@style,'display: block')]//*[@class="btn btn-primary bootbox-accept"]`
       ),
     printCountSheetDD: () => cy.get(`#printCountSheetDD`),
     confirmDeleteBtn: () =>
       cy.xpath(
-        `//*[@ng-submit='confirmDelete(inventory.id)']//*[@type='submit']`,
+        `//*[@ng-submit='confirmDelete(inventory.id)']//*[@type='submit']`
       ),
     importCountSheetBtn: () => cy.xpath(`//*[@ng-show='canImportSetups']`),
     editInventoryDate: () => cy.xpath(`//*[@ng-click='fixInventoryDate()']`),
@@ -56,7 +56,7 @@ class inventoryPage {
     deleteConfirm: () => cy.xpath(`(//*[@class="btn btn-danger"])[1]`),
     invSummaryStarting: () =>
       cy.xpath(
-        `//*[@translate='inviosoApp.foodUsageReport.theoretical.starting']`,
+        `//*[@translate='inviosoApp.foodUsageReport.theoretical.starting']`
       ),
     exportAsDD: () => cy.xpath(`//button[.='Export as']`),
     productSearchFilter: () => cy.get(`[data-testid='productSearch']`),
@@ -90,9 +90,9 @@ class inventoryPage {
         .get(`.modal-body>.bootbox-body`)
         .should(
           "include.text",
-          "This inventory has been marked as closed.  Are you sure you want to reopen it?",
+          "This inventory has been marked as closed.  Are you sure you want to reopen it?"
         ),
-    history: () => cy.get(`[ng-click='history()']`),
+    history: () => cy.get(`[ng-click='history()']`)
   };
 
   createCountRole() {

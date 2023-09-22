@@ -4,11 +4,11 @@ class centralPage {
       cy.xpath(`//*[@href='../#/companyConceptConfig/new']`),
     selectCompany: () =>
       cy.xpath(
-        `//*[@aria-label='Select a company activate']//*[contains(text(),'Select a company')]`,
+        `//*[@aria-label='Select a company activate']//*[contains(text(),'Select a company')]`
       ),
     selectWasabiSushiCoCompany: () =>
       cy.xpath(
-        `//*[@ng-bind-html='c.name | highlight: $select.search']//*[.='Wasabi Sushi Co']`,
+        `//*[@ng-bind-html='c.name | highlight: $select.search']//*[.='Wasabi Sushi Co']`
       ),
     selectConcept: () =>
       cy.xpath(`//*[@aria-label='Select a concept activate']`),
@@ -16,7 +16,7 @@ class centralPage {
     selectKey: () => cy.xpath(`//span[@aria-label='Select a key activate']`),
     selectVendorAutoDeleteKey: () =>
       cy.xpath(
-        `//*[@class='ui-select-choices-row-inner']//*[contains(text(),'VENDOR_AUTO_DELETE_SENT_ORDER')]`,
+        `//*[@class='ui-select-choices-row-inner']//*[contains(text(),'VENDOR_AUTO_DELETE_SENT_ORDER')]`
       ),
     selectVendorAutoDeleteKeyConfig: () =>
       cy.xpath(`//select[@name='vendorAutoDeleteSentOrder']`),
@@ -37,8 +37,8 @@ class centralPage {
     selectAnalyst2: () => cy.xpath(`//div[@title='analyst2']`),
     selectAnalyst2ImpersonateUnit: () =>
       cy.xpath(
-        `(//div[@class='ui-grid-cell-contents ng-binding ng-scope'][normalize-space()='Analyst'])[2]`,
-      ),
+        `(//div[@class='ui-grid-cell-contents ng-binding ng-scope'][normalize-space()='Analyst'])[2]`
+      )
   };
 
   createVendorAutoDeleteSentOrders() {

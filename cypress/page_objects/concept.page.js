@@ -5,7 +5,7 @@ class conceptPage {
     fullServiceDD: () => cy.get('[aria-label="Full Service"]'),
     saveBtn: () => cy.get('[type="submit"]'),
     searchBtn: () => cy.xpath(`//*[@placeholder="Search"]`),
-    assertionList: () => cy.get(".ui-grid-row.ng-scope"),
+    assertionList: () => cy.get(".ui-grid-row.ng-scope")
   };
 
   createConcept(conceptName) {

@@ -37,26 +37,26 @@ class menuItemPage {
     addRecipe: () => cy.get(`button[ng-click="addIngredient('recipe')"]`),
     handleItem: () =>
       cy.xpath(
-        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[1]`,
+        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[1]`
       ),
     addPrepItem: () => cy.get(`div[ng-model="row.entity['code']"]`),
     addPrepItemTxt: () =>
       cy.get(`input[placeholder="Choose (Type at least 2 characters)"]`),
     handleQuantity: () =>
       cy.xpath(
-        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[4]`,
+        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[4]`
       ),
     addQuantityRecipe: () =>
       cy.get(`[ng-model="row.entity['quantityDisplay']"]`),
     handleUnit: () =>
       cy.xpath(
-        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[5]`,
+        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[5]`
       ),
     printDD: () =>
       cy.xpath(`//*[local-name() = 'svg'][@data-testid='ArrowDropDownIcon']`),
     addAlcoholBtn: () => cy.get(`[ng-click="addIngredient('alcohol')"]`),
     selectWrap: () => cy.xpath(`//ui-select-wrap[@class='ng-scope']`),
-    itemInputField: () => cy.xpath(`//*[@aria-label='Select box']`),
+    itemInputField: () => cy.xpath(`//*[@aria-label='Select box']`)
   };
 
   viewListandAdd() {

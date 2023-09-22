@@ -53,7 +53,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -64,7 +64,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -77,7 +77,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item
@@ -134,7 +134,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -145,7 +145,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -158,7 +158,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item
@@ -209,7 +209,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -220,7 +220,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -239,25 +239,25 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     orderPage.finalReviewProcessOnlyVIAdd(
       newVendorItemCode1,
       newVendorItem1,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     orderPage.finalReviewProcessOnlyVIAdd(
       newVendorItemCode2,
       newVendorItem2,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     orderPage.finalReviewProcessOnlyVIAdd(
       newVendorItemCode3,
       newVendorItem3,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     //logout from app
@@ -287,7 +287,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       invoiceNumberStr6,
-      newCustomerName,
+      newCustomerName
     );
     orderPage.changeStatusToFinalReview(invoiceNumberStr6);
     // add line item in the final Review
@@ -296,7 +296,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(invoiceNumberStr6);
     // solve questions regarding vendor item
@@ -373,7 +373,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       invoiceNumberStr8,
-      newCustomerName,
+      newCustomerName
     );
     orderPage.changeStatusToFinalReview(invoiceNumberStr8);
     // add line item in the final Review
@@ -382,7 +382,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(invoiceNumberStr8);
     //change payment account type

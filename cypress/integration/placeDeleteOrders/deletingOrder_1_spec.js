@@ -97,7 +97,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -127,7 +127,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -138,7 +138,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -158,7 +158,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item

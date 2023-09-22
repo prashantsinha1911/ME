@@ -48,7 +48,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -64,7 +64,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -82,7 +82,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item
@@ -128,7 +128,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.irProcessWithTenantCheckAndJFC(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -144,7 +144,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.ReconcialltionProcessWithTenantCheckAndJFC(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -162,7 +162,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode1,
       newVendorItem1,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item
@@ -229,7 +229,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -245,7 +245,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -260,7 +260,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item
@@ -318,7 +318,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -334,7 +334,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -352,7 +352,7 @@ describe("QA-3: Deleting Order", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode2,
       newVendorItem2,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item

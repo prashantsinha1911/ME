@@ -17,8 +17,7 @@ class inventoryPage {
     closeInventory: () => cy.get(`[ng-click="saveAndCloseInventory($event)"]`),
     okBtn: () => cy.xpath(`//*[@class="btn btn-primary bootbox-accept"]`),
     delete: () => cy.get(`[ng-click="delete()"]`),
-    printCS: () =>
-      cy.xpath(`(//*[@ng-hide="viewingSpecificInventoryDate"])[2]`),
+    printCS: () => cy.xpath(`(//*[@ng-hide="viewingSpecificInventoryDate"])[2]`)
   };
 
   createCount() {

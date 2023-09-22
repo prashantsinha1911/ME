@@ -68,13 +68,13 @@ describe("Bulk IR", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // complete initial Review without IRComplete Checkbox
     orderExtendedPage.irProcessWithoutinitialReviewCompleteCheck(
       testData.tenantName,
       newInvoiceNum2,
-      newCustomerName2,
+      newCustomerName2
     );
     //logout from app
     loginPageObjs.logout();
@@ -222,7 +222,7 @@ describe("Bulk IR", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum4,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -263,7 +263,7 @@ describe("Bulk IR", () => {
     orderExtendedPage.checkIRAnalyst(
       testData.tenantName,
       newInvoiceNum5,
-      newCustomerName,
+      newCustomerName
     );
     cy.reload();
     //go to Priority Report
@@ -275,7 +275,7 @@ describe("Bulk IR", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum5,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -316,7 +316,7 @@ describe("Bulk IR", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum5,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -346,7 +346,7 @@ describe("Bulk IR", () => {
       emailID,
       loginID,
       firstName,
-      lastName,
+      lastName
     );
     cy.reload();
     //logout from app
@@ -407,7 +407,7 @@ describe("Bulk IR", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum6,
-      newCustomerName3,
+      newCustomerName3
     );
     //logout from app
     loginPageObjs.logout();

@@ -17,7 +17,7 @@ class recipeSetupPage {
       cy.xpath(`//*[.='Open Kitchen Display Application']`),
     manageAllergenBtn: () => cy.get(`a[href="#/allergen"]`),
     manageEquipments: () => cy.get(`a[href="#/utensil"]`),
-    exportDD: () => cy.contains("Export as"),
+    exportDD: () => cy.contains("Export as")
   };
 
   createMenuTypes(name) {

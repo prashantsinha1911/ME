@@ -28,7 +28,7 @@ Cypress.Commands.add("loginViaAuth0", (username, password) => {
   let domainName = "https://auth-staging.dev.marginedge.com";
   cy.intercept(
     "POST",
-    "https://auth-staging.dev.marginedge.com/oauth/token",
+    "https://auth-staging.dev.marginedge.com/oauth/token"
   ).as("token");
   cy.intercept("POST", "/api/vanity?fromUrl*").as("vanity");
   cy.visit(Cypress.env("host"));
@@ -77,6 +77,6 @@ Cypress.Commands.add("loginViaAuth0", (username, password) => {
   cy.get(`[ng-controller="PurchasingReportController"]`).should("be.visible");
   cy.get(`[ng-controller="BudgetOverviewController"]`).should("be.visible");
   cy.xpath(
-    `//*[@heading="Top Price Movers"]//div[@class="panel panel-primary"]`,
+    `//*[@heading="Top Price Movers"]//div[@class="panel panel-primary"]`
   ).should("be.visible");
 });

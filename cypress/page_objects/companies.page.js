@@ -14,7 +14,7 @@ class companyPage {
     selectCommisionnary: () => cy.xpath(`(//*[@title="Select an Option"])`),
     selectOptionComissionary: () => cy.xpath(`//*[text()='Full Commissary']`),
     whyME: () => cy.xpath(`//*[@ng-model="company.zendeskWhy"]`),
-    saveBtn: () => cy.xpath(`//*[@type="submit"]//*[text()='Save']`),
+    saveBtn: () => cy.xpath(`//*[@type="submit"]//*[text()='Save']`)
   };
 
   createCompany(companyName, zenDeskID) {

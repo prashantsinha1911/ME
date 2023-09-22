@@ -130,7 +130,7 @@ describe("Inventory management system Part2", () => {
       dateObj.month,
       "01",
       dateObj.year,
-      "-",
+      "-"
     );
     inventoriesRolePage.closeInventoryForProducts(productList, firstdaydate);
     cy.wait(1000);
@@ -145,11 +145,11 @@ describe("Inventory management system Part2", () => {
       dateObj.month,
       daysInCurrentMonth,
       dateObj.year,
-      "-",
+      "-"
     );
     inventoriesRolePage.closeInventoryForProducts(
       ["Baby Carrots", "Cherry Tomato"],
-      lastdayDate,
+      lastdayDate
     );
     hamburgerMenuPageObj.goToInventoriesChild();
     // verify a removed section appears with the created product
@@ -195,7 +195,7 @@ describe("Inventory management system Part2", () => {
       dateObj.month,
       dateObj.day,
       dateObj.year,
-      "-",
+      "-"
     );
     setupPage.addAccPeriod(`13-4-WEEK-PERIODS`, startDate);
     cy.wait(500);
@@ -214,11 +214,11 @@ describe("Inventory management system Part2", () => {
       dateObj.month,
       daysInCurrentMonth,
       dateObj.year,
-      "-",
+      "-"
     );
     inventoriesRolePage.closeInventoryForProducts(
       ["Baby Carrots", "Cherry Tomato"],
-      lastdayDate,
+      lastdayDate
     );
     hamburgerMenuPageObj.goToInventoriesChild();
     // verify a removed section appears with the created product

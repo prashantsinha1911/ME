@@ -15,7 +15,7 @@ class notificationTaskPage {
     saveAndCloseProductModal: () =>
       cy.xpath(`//*[@ng-disabled='newAssignProductForm.$invalid']`),
     approveSelectedBtn: () => cy.get(`[ng-click='saveSelectedItems(true)']`),
-    okBtn: () => cy.get(`.btn.btn-primary.bootbox-accept`),
+    okBtn: () => cy.get(`.btn.btn-primary.bootbox-accept`)
   };
 
   assignProduct() {

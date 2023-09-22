@@ -33,7 +33,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
     vendorsPage.verifyEDIProcessing(
       "JFC",
       EDIData.EDI_Processing.No_EDI_Processing,
-      EDIData.creditMode.combined,
+      EDIData.creditMode.combined
     );
     hamburgerMenuPageObj.goToVendor();
     // change EDI status to No Handwritten and creditMode to `SKIPPED`
@@ -41,7 +41,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
       "JFC",
       EDIData.EDI_Processing.Process_EDI_No_Handwritten_Adjustments,
       EDIData.creditMode.skipped,
-      "99999",
+      "99999"
     );
     loginPageObjs.logout();
   });
@@ -51,7 +51,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
     hamburgerMenuPageObj.goToIntegration();
     integrationIntacctPage.throwMockEvent(
       "inboundemail-marginedge-com",
-      EDIData.mockEventData,
+      EDIData.mockEventData
     );
     loginPageObjs.logout();
   });
@@ -118,7 +118,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
       "JFC",
       EDIData.EDI_Processing.No_EDI_Processing,
       EDIData.creditMode.combined,
-      "56334243789",
+      "56334243789"
     );
     loginPageObjs.logout();
   });
@@ -140,7 +140,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
     vendorsPage.verifyEDIProcessing(
       newVendor,
       EDIData.EDI_Processing.Process_Images_with_EDI_Backup,
-      EDIData.creditMode.combined,
+      EDIData.creditMode.combined
     );
     loginPageObjs.logout();
   });
@@ -163,7 +163,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
       newVendor,
       EDIData.EDI_Processing.Process_Images_with_EDI_Backup,
       EDIData.creditMode.combined,
-      "12345",
+      "12345"
     );
     loginPageObjs.logout();
   });
@@ -173,7 +173,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
     hamburgerMenuPageObj.goToIntegration();
     integrationIntacctPage.throwMockEvent(
       "inboundemail-marginedge-com",
-      EDIData.mockEventData,
+      EDIData.mockEventData
     );
     loginPageObjs.logout();
   });
@@ -186,7 +186,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
     orderPage.reconciliationProcessEDI(
       testData.tenantName,
       newVendor,
-      "IMPORTED1",
+      "IMPORTED1"
     );
     loginPageObjs.logout();
   });
@@ -216,7 +216,7 @@ describe("QA-90: import EDI invoices to improve Reconciliation process", () => {
       newVendor,
       EDIData.EDI_Processing.No_EDI_Processing,
       EDIData.creditMode.combined,
-      "56334243789",
+      "56334243789"
     );
     loginPageObjs.logout();
   });

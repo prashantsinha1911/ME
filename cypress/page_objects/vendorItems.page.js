@@ -36,7 +36,7 @@ class vendorItemPage {
     selectVI: () => cy.xpath(`(//*[@class='ui-grid-row ng-scope'])[1]`),
     editVIBtn: () =>
       cy.xpath(
-        `//*[@translate='inviosoApp.vendorProduct.home.editLabel']/parent::button`,
+        `//*[@translate='inviosoApp.vendorProduct.home.editLabel']/parent::button`
       ),
     deleteConfrmBtn: () =>
       cy.xpath(`//*[@class='btn btn-danger'][@type='submit']`),
@@ -57,18 +57,17 @@ class vendorItemPage {
       cy.xpath(`//input[@placeholder='Edit a vendor...']`),
     searchCentralVIDD: () =>
       cy.xpath(
-        `//div[@placeholder='Search for a central item vendor to import...']`,
+        `//div[@placeholder='Search for a central item vendor to import...']`
       ),
     typeCentralVIDD: () =>
       cy.xpath(
-        `//input[@placeholder='Search for a central item vendor to import...']`,
+        `//input[@placeholder='Search for a central item vendor to import...']`
       ),
     selectVIDD: () =>
       cy.xpath(`//*[@class='ui-select-choices-row ng-scope active']`),
     addPackagingBtn: () => cy.xpath(`//button[@ng-click='addPackaging()']`),
     selectPackagingOptn: () => cy.xpath(`//a[normalize-space()='One PC']`),
-    savePackagingBtn: () =>
-      cy.xpath(`//button[@ng-click='addNewPack($event)']`),
+    savePackagingBtn: () => cy.xpath(`//button[@ng-click='addNewPack($event)']`)
   };
 
   createVI(vendorName, viName, viItemCode, prod, input1, input2, input3) {
@@ -151,7 +150,7 @@ class vendorItemPage {
     input1,
     input2,
     input3,
-    input4,
+    input4
   ) {
     this.element.searchValue().clear();
     this.element.searchValue().type(vendorName);

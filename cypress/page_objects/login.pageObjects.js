@@ -21,16 +21,16 @@ class loginPage {
       cy.xpath(`//*[@ng-controller="BudgetOverviewController"]`),
     topPriceMoverDashboardElem: () =>
       cy.xpath(
-        `//*[@heading="Top Price Movers"]//div[@class="panel panel-primary"]`,
+        `//*[@heading="Top Price Movers"]//div[@class="panel panel-primary"]`
       ),
     salesDashboardElement: () =>
       cy.xpath(
-        `//panel[@class='ng-scope ng-isolate-scope']//div[@class='panel panel-green']`,
+        `//panel[@class='ng-scope ng-isolate-scope']//div[@class='panel panel-green']`
       ),
     settings: () => cy.xpath(`//*[@href='#/settings']`),
     passwordChange: () => cy.xpath(`//*[@data-testid='user-password']`),
     emailAddressInput: () => cy.xpath(`//input[@placeholder='Your e-mail']`),
-    saveBtn: () => cy.xpath(`//button[normalize-space()='Save']`),
+    saveBtn: () => cy.xpath(`//button[normalize-space()='Save']`)
   };
 
   verifyHomePageForUser() {
@@ -55,10 +55,10 @@ class loginPage {
   logout() {
     cy.wait(2000);
     this.element.logoutDD().should("be.visible").click({
-      force: true,
+      force: true
     });
     this.element.clickLogout().should("be.visible").click({
-      force: true,
+      force: true
     });
     cy.wait(2000);
     let domainName = "https://auth-staging.dev.marginedge.com";
@@ -82,7 +82,7 @@ class loginPage {
 
   checkPasswordChangeAndSettings() {
     this.element.logoutDD().should("be.visible").click({
-      force: true,
+      force: true
     });
     // this element is no longer visible in the UI
     // this.element.passwordChange().should('be.visible');
@@ -108,7 +108,7 @@ class loginPage {
   setEmailAddressExistingUser() {
     cy.wait(1000);
     this.element.logoutDD().should("be.visible").click({
-      force: true,
+      force: true
     });
     this.element.settings().should("be.visible").click();
     //this.element.emailAddressInput().should('be.visible').clear().type(`edge.testlab1@gmail.com`);

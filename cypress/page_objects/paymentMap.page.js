@@ -11,7 +11,7 @@ class paymentMapPage {
     addAccount: () => cy.xpath(`//*[@ng-click='addRow()']`),
     paymentAccountName: () =>
       cy.get(
-        `.ui-grid-cell.ng-scope.ui-grid-coluiGrid-0006 > .ui-grid-cell-contents.ng-binding.ng-scope`,
+        `.ui-grid-cell.ng-scope.ui-grid-coluiGrid-0006 > .ui-grid-cell-contents.ng-binding.ng-scope`
       ),
     accSaveBtn: () => cy.xpath(`//button[normalize-space()='Save']`),
     okBtn: () => cy.xpath(`//button[contains(text(),'OK')]`),
@@ -21,8 +21,8 @@ class paymentMapPage {
     titleAcc: () => cy.xpath(`//h2[@class='ng-scope']`),
     refWarningPayment: () =>
       cy.xpath(
-        `//div[contains(text(),'Payment account is referenced by one or more order')]`,
-      ),
+        `//div[contains(text(),'Payment account is referenced by one or more order')]`
+      )
   };
 
   paymentMapping() {

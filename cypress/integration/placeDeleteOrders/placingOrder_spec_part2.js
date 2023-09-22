@@ -76,7 +76,7 @@ describe("place Order Verification Part-2", () => {
       newVendor,
       invoiceNumberStr,
       testData.package2,
-      testData.irAddress,
+      testData.irAddress
     );
     loginPageObjs.logout();
   });
@@ -92,7 +92,7 @@ describe("place Order Verification Part-2", () => {
       vendorItemName,
       invoiceNumberStr,
       testData.package2,
-      testData.reconciliationAddress,
+      testData.reconciliationAddress
     );
     loginPageObjs.logout();
   });
@@ -153,7 +153,7 @@ describe("place Order Verification Part-2", () => {
       newVendor2,
       invoiceNumberStr2,
       testData.package2,
-      testData.irAddress,
+      testData.irAddress
     );
     hamburgerMenuPageObj.gotoBillPay();
     hamburgerMenuPageObj.gotoBillPaySetup();
@@ -228,7 +228,7 @@ describe("place Order Verification Part-2", () => {
       emailID,
       loginID,
       firstName,
-      lastName,
+      lastName
     );
     hamburgerMenuPageObj.goToOrderParent();
     hamburgerMenuPageObj.goToOrders();

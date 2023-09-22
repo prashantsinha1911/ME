@@ -78,7 +78,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       "invoiceNumber",
-      newCustomerName,
+      newCustomerName
     );
     // go to Home
     hamburgerMenuPageObj.goToHome();
@@ -142,7 +142,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -153,7 +153,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();
@@ -166,7 +166,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview(newInvoiceNum);
     // solve questions regarding vendor item
@@ -185,7 +185,7 @@ describe("QA-58: Reconciliation Process", () => {
       emailID,
       loginID,
       firstName,
-      lastName,
+      lastName
     );
     cy.reload();
     loginPageObjs.chooseTenant(createRestName);
@@ -279,7 +279,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithJFC(
       testData.tenantName,
       "ArrowCreditOrder",
-      newCustomerName,
+      newCustomerName
     );
     orderPage.changeStatusToFinalReview("ArrowCreditOrder");
     // add line item in the final Review
@@ -288,7 +288,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode5,
       newVendorItem5,
-      testData.productName,
+      testData.productName
     );
     orderPage.changeStatusToAccountManagerReview("ArrowCreditOrder");
     // solve questions regarding vendor item

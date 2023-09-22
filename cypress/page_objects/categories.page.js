@@ -6,12 +6,12 @@ class categoryPage {
     sortTable: () => cy.xpath(`(//*[@ng-keydown="handleKeyDown($event)"])[1]`),
     addRow1: () =>
       cy.xpath(
-        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[1]`,
+        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[1]`
       ),
     addRow1Value: () => cy.xpath(`//*[@ng-model="row.entity['name']"]`),
     addRow2: () =>
       cy.xpath(
-        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[2]`,
+        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[2]`
       ),
     // categoryTypeDD: () => cy.get(`input[ng-model="row.entity['categoryType']"]`),
     handleRow: () =>
@@ -24,7 +24,7 @@ class categoryPage {
     categorySelect: () => cy.xpath(`//option[text()='Food']`),
     addRow3: () =>
       cy.xpath(
-        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[3]`,
+        `(//*[contains(@class,'ui-grid-cell-contents ng-binding ng-scope')])[3]`
       ),
     selectRow: () => cy.xpath(`(//*[@ng-model="row.isSelected"])[1]`),
     saveBtn: () => cy.xpath(`//*[@ng-click="saveSync()"]`),
@@ -55,15 +55,15 @@ class categoryPage {
     addNewCategoryTpeBtn: () => cy.get(`[ng-click='addCategoryTypeRow()']`),
     categoryTypeNameCol: () =>
       cy.xpath(
-        `(//div[@role='gridcell'][contains(@class,'ui-grid-white')])[1]`,
+        `(//div[@role='gridcell'][contains(@class,'ui-grid-white')])[1]`
       ),
     categoryTypeNameField: () => cy.get(`[ng-model="row.entity['name']"]`),
     ingredientTypeNameCol: () =>
       cy.xpath(
-        `(//div[@role='gridcell'][contains(@class,'ui-grid-white')])[2]`,
+        `(//div[@role='gridcell'][contains(@class,'ui-grid-white')])[2]`
       ),
     selectIngredientType: () => cy.get(`[ng-class="'colt' + col.uid"]`),
-    saveCategoryTypeBtn: () => cy.get(`[ng-click='saveCategoryTypes()']`),
+    saveCategoryTypeBtn: () => cy.get(`[ng-click='saveCategoryTypes()']`)
   };
 
   searchCategoryAndDelete() {

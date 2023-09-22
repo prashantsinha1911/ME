@@ -40,7 +40,7 @@ let inventoryManagementData = {
   sectionName2: sectionName2,
   countSheetName3: countSheetName3,
   invoiceNum: invoiceNum,
-  itemCode: itemCode,
+  itemCode: itemCode
 };
 
 before(() => {
@@ -94,7 +94,7 @@ describe("Inventory management system Part-1", () => {
       productName1,
       "package1",
       "1",
-      testData.productData.packagingPriceInVI,
+      testData.productData.packagingPriceInVI
     );
     loginPageObjs.logout();
   });
@@ -105,13 +105,13 @@ describe("Inventory management system Part-1", () => {
     countSheetPage.createCountSheet(
       countSheetName,
       productName1,
-      "Cranberry Dessert (Carry out)",
+      "Cranberry Dessert (Carry out)"
     );
     // edit product price and remove recipe item
     countSheetPage.editProdFromCS(
       countSheetName,
       productName1,
-      "Cranberry Dessert (Carry out)",
+      "Cranberry Dessert (Carry out)"
     );
     loginPageObjs.logout();
   });
@@ -129,7 +129,7 @@ describe("Inventory management system Part-1", () => {
       dateObj.month,
       dateObj.day,
       dateObj.year,
-      "/",
+      "/"
     );
     loginPageObjs.loginAs(creds.adminName, creds.password);
     hamburgerMenuPageObj.goToCountSheet();
@@ -138,13 +138,13 @@ describe("Inventory management system Part-1", () => {
       sectionName2,
       countSheetName2,
       productName1,
-      "Simple Syrup",
+      "Simple Syrup"
     );
     countSheetPage.verifyCSHistory(
       creds.adminName,
       formattedDate,
       countSheetName,
-      "CATEGORY",
+      "CATEGORY"
     );
     loginPageObjs.logout();
   });
@@ -155,7 +155,7 @@ describe("Inventory management system Part-1", () => {
     inventoriesRolePage.saveInvWithMultipleSection(
       countSheetName2,
       sectionName2,
-      "Simple Syrup",
+      "Simple Syrup"
     );
     inventoriesRolePage.checkSavingMultipleInv(countSheetName2);
     inventoriesRolePage.close(countSheetName2);
@@ -169,7 +169,7 @@ describe("Inventory management system Part-1", () => {
     assertionPage.verifyPerfFoodUsage();
     performancePage.verifyProductData(
       productName1,
-      testData.productData.productUnit,
+      testData.productData.productUnit
     );
     loginPageObjs.logout();
   });
@@ -194,7 +194,7 @@ describe("Inventory management system Part-1", () => {
       countSheetName3,
       sectionName,
       "Dairy Products",
-      "Inari Tofu Pockets",
+      "Inari Tofu Pockets"
     );
     loginPageObjs.logout();
   });

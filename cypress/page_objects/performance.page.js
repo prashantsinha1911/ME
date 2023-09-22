@@ -7,7 +7,7 @@ class PerformancePage {
     // the row is from the second table of food usage report page
     itemRow: () =>
       cy.xpath(`(//*[contains(@class,'ui-grid-row-selected')])[2]`),
-    expandHeaderIcon: () => cy.get(`[ng-click='headerButtonClick($event)']`),
+    expandHeaderIcon: () => cy.get(`[ng-click='headerButtonClick($event)']`)
   };
 
   export(reportName) {

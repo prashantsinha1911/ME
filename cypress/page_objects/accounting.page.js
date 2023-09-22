@@ -12,7 +12,7 @@ class accounting {
     saveBtn: () => cy.xpath(`//button[@type='submit']`),
     duplicateInvoiceTxt: () =>
       cy.xpath(`//div[@ng-show='duplicateInvoiceNumber']`),
-    cancelBtn: () => cy.xpath(`//button[contains(text(),'Cancel')]`),
+    cancelBtn: () => cy.xpath(`//button[contains(text(),'Cancel')]`)
   };
   searchInvoice(invoiceName) {
     this.element.searchInvoice().should("be.visible").clear().type(invoiceName);

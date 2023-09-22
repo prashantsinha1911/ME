@@ -53,7 +53,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from application
     loginPageObjs.logout();
@@ -94,7 +94,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //orderPage.checkDeleteBtn();
     //logout from app
@@ -141,7 +141,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from application
     loginPageObjs.logout();
@@ -160,13 +160,13 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithDifferentVendor(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     cy.reload();
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -185,7 +185,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcessVerification(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     //logout from app
     loginPageObjs.logout();
@@ -234,7 +234,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheckAdmin(
       testData.tenantName,
       "A. Russo & Sons, Inc.",
-      "Credit",
+      "Credit"
     );
     hamburgerMenuPageObj.goToOrderParent();
     // go to order page
@@ -247,7 +247,7 @@ describe("QA-58: Reconciliation Process", () => {
       testData.tenantName,
       "A. Russo & Sons, Inc.",
       "Heavy Cream",
-      "Credit",
+      "Credit"
     );
     //close the order
     cy.wait(3000);
@@ -347,14 +347,14 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheckJFC(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // reconcile order
     orderPage.changeStatusToInReconciliation(newInvoiceNum);
     orderPage.ReconcialltionProcessWithJFC(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -404,7 +404,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     //logout from app
     loginPageObjs.logout();
@@ -419,7 +419,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.ReconcialltionProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     hamburgerMenuPageObj.goToOrders();
     orderPage.changeStatusToFinalReview(newInvoiceNum);
@@ -429,7 +429,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.finalReviewProcess(
       newVendorItemCode,
       newVendorItem,
-      testData.productName,
+      testData.productName
     );
     //orderPage.changeStatusToAccountManagerReview();
     //logout from app
@@ -518,7 +518,7 @@ describe("QA-58: Reconciliation Process", () => {
     orderPage.irProcessWithTenantCheck(
       testData.tenantName,
       newInvoiceNum,
-      newCustomerName,
+      newCustomerName
     );
     // go to home
     hamburgerMenuPageObj.goToHome();

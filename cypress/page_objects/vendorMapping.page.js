@@ -5,7 +5,7 @@ class vendorMapPage {
     openaccSys: () => cy.xpath(`//*[@aria-label="Select box activate"]`),
     selectBox: () => cy.xpath(`//*[@aria-label="Select box"]`),
     selectItem: () => cy.get(`.ui-select-choices-row-inner`),
-    saveBtn: () => cy.get(`[ng-click="saveSync()"]`),
+    saveBtn: () => cy.get(`[ng-click="saveSync()"]`)
   };
 
   mapVendor() {

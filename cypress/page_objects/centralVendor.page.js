@@ -19,7 +19,7 @@ class centralVendor {
     centralVendorTableData: () =>
       cy.xpath(`(//*[@class='ui-grid-cell-contents ng-binding ng-scope'])[2]`),
     selectEDIFormat: () => cy.get(`[ng-model='row.isSelected']`).first(),
-    deleteEDIFormat: () => cy.get(`[ng-click='deleteRows()']`),
+    deleteEDIFormat: () => cy.get(`[ng-click='deleteRows()']`)
   };
 
   searchCentralVendor(vendorName) {

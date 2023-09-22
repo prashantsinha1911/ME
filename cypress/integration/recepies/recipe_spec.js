@@ -38,7 +38,7 @@ describe("QA-56: Recipe", () => {
     // create recipe with image
     menuItemPageObj.createRecipeItemAndUploadImage(
       newRecipeName,
-      newRecipeTypeName,
+      newRecipeTypeName
     );
     // edit recipe
     menuItemPageObj.searchAndEditRecipe(newRecipeName, newRecipeTypeName);

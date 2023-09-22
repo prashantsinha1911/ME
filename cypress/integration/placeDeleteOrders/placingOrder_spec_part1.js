@@ -45,7 +45,7 @@ let placingOrderData = {
   loginID: loginID,
   firstName: firstName,
   lastName: lastName,
-  productName: productName,
+  productName: productName
 };
 
 before(() => {
@@ -148,7 +148,7 @@ describe("place Order Verification Part-1", () => {
       newVendor,
       vendorItemName,
       utilObj.makeId(),
-      productName,
+      productName
     );
     loginPageObjs.logout();
   });
@@ -160,7 +160,7 @@ describe("place Order Verification Part-1", () => {
       dateObj.month,
       dateObj.day,
       dateObj.year,
-      "-",
+      "-"
     );
     loginPageObjs.loginAs(creds.adminName, creds.password);
     hamburgerMenuPageObj.goToInventories();

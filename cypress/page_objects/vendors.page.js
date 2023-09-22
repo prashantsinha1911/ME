@@ -86,7 +86,7 @@ class vendorPage {
     selectCheckingAccount: () =>
       cy
         .xpath(
-          `//div[@class='form-inline']//select[@name='balanceSheetAccountId']`,
+          `//div[@class='form-inline']//select[@name='balanceSheetAccountId']`
         )
         .select(`Checking Account`),
     saveVendor: () => cy.get(`#vendorSaveBtn`),
@@ -95,17 +95,17 @@ class vendorPage {
       cy.xpath(`//span[@aria-label='Select a central vendor activate']`),
     importVendorName: () =>
       cy.xpath(
-        `//input[@placeholder='Select central vendor - Type at least 2 characters to search']`,
+        `//input[@placeholder='Select central vendor - Type at least 2 characters to search']`
       ),
     selectCV: () =>
       cy.xpath(
-        `//*[@ng-click='$select.select(vendor,$select.skipFocusser,$event)']`,
+        `//*[@ng-click='$select.select(vendor,$select.skipFocusser,$event)']`
       ),
     vendorAccNum: () =>
       cy.xpath(
-        `//input[@placeholder='Account # to be included on orders to vendor Optional']`,
+        `//input[@placeholder='Account # to be included on orders to vendor Optional']`
       ),
-    vendorCreditMode: () => cy.xpath(`//select[@name='vendorCreditMode']`),
+    vendorCreditMode: () => cy.xpath(`//select[@name='vendorCreditMode']`)
   };
 
   verifyCookies() {

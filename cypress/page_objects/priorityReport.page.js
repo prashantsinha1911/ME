@@ -10,7 +10,7 @@ class priorityReport {
     okBtn: () => cy.get(`[ng-click="howManyBulkModalOk()"]`),
     recWarning: () =>
       cy.xpath(
-        `//*[@class='modal-title'][contains(.,'No work left to do for this team')]`,
+        `//*[@class='modal-title'][contains(.,'No work left to do for this team')]`
       ),
     okBtnWarning: () => cy.xpath(`//button[contains(text(),'OK')]`),
     sortByWaitTime: () => cy.xpath(`//span[text()='Wait Time']`),
@@ -18,8 +18,8 @@ class priorityReport {
       cy.get(`[ng-click="continueTasks('INITIAL_REVIEW')"]`),
     noWorkWarning: () =>
       cy.xpath(
-        `//div[@class='bootbox-body'][contains(text(),'For this lead analyst it looks like all of the work is done for the status you selected.')]`,
-      ),
+        `//div[@class='bootbox-body'][contains(text(),'For this lead analyst it looks like all of the work is done for the status you selected.')]`
+      )
   };
 
   startIR(tenantName) {

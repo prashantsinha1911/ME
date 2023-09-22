@@ -22,7 +22,7 @@ class assertionPage {
     integrationNotes: () => cy.get(`[ng-click='showIntegrationNotes()']`),
     filterCentralVendorBtn: () =>
       cy.get(`.btn.btn-md.btn-info.ng-binding.dropdown-toggle`),
-    mergeProductBtn: () => cy.get(`[ng-click='mergeProducts()']`),
+    mergeProductBtn: () => cy.get(`[ng-click='mergeProducts()']`)
   };
 
   verifyPerfBudgetPage() {
@@ -111,7 +111,7 @@ class assertionPage {
       "September",
       "October",
       "November",
-      "December",
+      "December"
     ];
     const date = new Date();
     return month[date.getMonth()];

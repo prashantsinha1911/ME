@@ -3,7 +3,7 @@ class allergenPageSetup {
     manageAllergenBtn: () => cy.get(`a[href="#/allergen"]`),
     addNewAllergen: () => cy.get(`a[href="/#/allergen/new"]`),
     nameAllergen: () => cy.get(`input[name="name"]`),
-    saveBtn: () => cy.xpath(`//*[text()='Save']`),
+    saveBtn: () => cy.xpath(`//*[text()='Save']`)
   };
 
   createAllergen(allergenName) {

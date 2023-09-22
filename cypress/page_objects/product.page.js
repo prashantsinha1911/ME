@@ -31,7 +31,7 @@ class productPage {
     confirmDeleteBtn: () => cy.xpath(`//*[@ng-disabled='deleteForm.$invalid']`),
     editProductBtn: () =>
       cy.xpath(
-        `//*[@translate='inviosoApp.product.home.editLabel']/parent::button`,
+        `//*[@translate='inviosoApp.product.home.editLabel']/parent::button`
       ),
     manageAllergen: () => cy.get(`button[ng-click="showAllergensModal()"]`),
     addAllergen: () => cy.get(`div[ng-model="row.isSelected"]`),
@@ -51,7 +51,7 @@ class productPage {
     invStatusCol: () => cy.xpath(`(//a[@role='cell'])[5]`),
     verifyProductname: (productName) =>
       cy.xpath(`//input[@data-testid='productName-${productName}']`),
-    inventoriedProdCheckBox: () => cy.get(`#inventoriedProduct`),
+    inventoriedProdCheckBox: () => cy.get(`#inventoriedProduct`)
   };
 
   createProduct(productName) {
@@ -152,7 +152,7 @@ class productPage {
         $el
           .text()
           .includes(
-            "Changing this Product will update the data for all Restaurants in this",
+            "Changing this Product will update the data for all Restaurants in this"
           )
       ) {
         this.element.confirmSaveBtn().click();
@@ -199,7 +199,7 @@ class productPage {
       .latestUnitPrice()
       .should(
         "include.text",
-        `Latest Unit Price: $${testData.productData.updatedPrice}`,
+        `Latest Unit Price: $${testData.productData.updatedPrice}`
       );
     this.element.historyBtn().should("be.visible").click();
     cy.wait(1000);

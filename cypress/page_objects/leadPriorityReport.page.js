@@ -1,6 +1,6 @@
 class leadPriorityReportPage {
   element = {
-    questionReport: () => cy.get(`button[ui-sref="questionTaskReport"]`),
+    questionReport: () => cy.get(`button[ui-sref="questionTaskReport"]`)
   };
 
   clickQuestionReport() {

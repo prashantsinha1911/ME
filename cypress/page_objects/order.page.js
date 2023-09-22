@@ -21,7 +21,7 @@ class orderPage {
     unitPrice: () => cy.get(`input[name="unitPrice"]`),
     okBtnLI: () =>
       cy.get(
-        `button[ng-click="updateTranslatedName(); unitQuantityChanged();"]`,
+        `button[ng-click="updateTranslatedName(); unitQuantityChanged();"]`
       ),
     selectRadio: () =>
       cy.get(`input[ng-click="setNewItemPackaging(pack)"]`).first(),
@@ -30,7 +30,7 @@ class orderPage {
     invoiceDate: () => cy.get(`[ng-model="order.initialReviewInvoiceDate"]`),
     closedInvoiceDate: () =>
       cy.xpath(
-        `//*[@ng-required='reconciliationComplete || reconciliationCompleted']`,
+        `//*[@ng-required='reconciliationComplete || reconciliationCompleted']`
       ),
     confirmDate: () => cy.xpath(`//*[@ng-click='close($event)']`),
     closeDateCal: () => cy.get(`button[ng-click="close($event)"]`),
@@ -43,11 +43,11 @@ class orderPage {
       cy.xpath(`(//*[@class='checkbox-inline icheck-label'])[1]`),
     initialReviewCompleteLabel: () =>
       cy.xpath(
-        `//span[normalize-space()='The initial review for this order is complete.']`,
+        `//span[normalize-space()='The initial review for this order is complete.']`
       ),
     recCompleteLabel: () =>
       cy.xpath(
-        `//span[normalize-space()='The reconciliation for this order is complete.']`,
+        `//span[normalize-space()='The reconciliation for this order is complete.']`
       ),
     amReviewCheck: () =>
       cy.xpath(`(//*[@class="checkbox-inline icheck-label"])[3]`),
@@ -71,7 +71,7 @@ class orderPage {
     itemCode: () => cy.get(`#provisionalProductCode`),
     vendorItem: () =>
       cy.xpath(
-        `(//*[@placeholder="Please enter a name for the Vendor Item"])[2]`,
+        `(//*[@placeholder="Please enter a name for the Vendor Item"])[2]`
       ),
     clickProductLI: () => cy.xpath(`(//*[@title="Select a product"])[2]`),
     typeProductName: () => cy.xpath(`(//*[@aria-label="Select a product"])[2]`),
@@ -86,17 +86,17 @@ class orderPage {
       cy.xpath(`(//*[@ng-model="newReconcileLineItem.unit.price"])[2]`),
     concernExpander: () =>
       cy.xpath(
-        `(//*[@ng-click="toggleConcerns($event, editForm.$invalid)"])[1]`,
+        `(//*[@ng-click="toggleConcerns($event, editForm.$invalid)"])[1]`
       ),
     vendorItemVerified: () =>
       cy.xpath(
-        `//*[@id="vendorItemVerified"]//*[@class="icheckbox_minimal-blue"]`,
+        `//*[@id="vendorItemVerified"]//*[@class="icheckbox_minimal-blue"]`
       ),
     vendorItemRadio: () =>
       cy.xpath(`(//*[@class='radio']//*[@class='icheck-label'])[2]`),
     vendorInfoRadio: () =>
       cy.xpath(
-        `//*[@id="vendorItemVerified"]//*[@class="icheckbox_minimal-blue"]`,
+        `//*[@id="vendorItemVerified"]//*[@class="icheckbox_minimal-blue"]`
       ),
     viewAllOrder: () => cy.get(".ui-grid-viewport.ng-isolate-scope"),
     openDDForOrderStatus: () => cy.get(`#appendToEl`),
@@ -116,7 +116,7 @@ class orderPage {
     deleteOrder: () => cy.get(`[ng-click="delete()"]`),
     deleteConfirm: () =>
       cy.get(
-        `[data-testid="orderPages-deleteOrderConfirmationModal-deleteButton"]`,
+        `[data-testid="orderPages-deleteOrderConfirmationModal-deleteButton"]`
       ),
     saveOrderBtn: () => cy.get(`#saveOrder`),
     statusClosed: () => cy.get(`[ng-click="changeViewBy($event, 'CLOSED')"]`),
@@ -144,15 +144,15 @@ class orderPage {
       cy.xpath(`//*[@ng-model='c.assignedTo']`).select("Restaurant Admin"),
     deleteAndSendEmail: () =>
       cy.xpath(
-        `//*[contains(@ng-hide,'reconciliationCompleted || !accountManager && !admin || !hasSendEmailActiveConcern(c)')]`,
+        `//*[contains(@ng-hide,'reconciliationCompleted || !accountManager && !admin || !hasSendEmailActiveConcern(c)')]`
       ),
     confirmDeleteAndSendEmailTxt: () =>
       cy.xpath(
-        `//*[@class='bootbox-body'][contains(text(),'Confirm that you would like to update status to Sent and send an email notification concerning this order.')]`,
+        `//*[@class='bootbox-body'][contains(text(),'Confirm that you would like to update status to Sent and send an email notification concerning this order.')]`
       ),
     confirmDeleteAndSendEmailTxt2: () =>
       cy.xpath(
-        `//*[@class='bootbox-body'][contains(text(),'Confirm that you would like to delete and send an email notification concerning this order.')]`,
+        `//*[@class='bootbox-body'][contains(text(),'Confirm that you would like to delete and send an email notification concerning this order.')]`
       ),
     confirmDeleteAndSendEmail: () =>
       cy.xpath(`//*[@class='btn btn-primary bootbox-accept']`),
@@ -160,7 +160,7 @@ class orderPage {
     addPhoto: () => cy.get(`a[ng-model="files"]`),
     addPhotoRec: () =>
       cy.xpath(
-        `//a[@class='btn btn-success btn-xs ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty'][@accept='image/*']`,
+        `//a[@class='btn btn-success btn-xs ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty'][@accept='image/*']`
       ),
     saveInv: () => cy.xpath(`//*[text()='Save']`),
     changePrice: () =>
@@ -183,7 +183,7 @@ class orderPage {
       cy.xpath(`//*[@ng-click="changeViewBy($event, 'INITIAL_REVIEW')"]`),
     selectInReconciliationDD: () =>
       cy.xpath(
-        `//*[@ng-click="changeViewBy($event, 'PENDING_RECONCILIATION')"]`,
+        `//*[@ng-click="changeViewBy($event, 'PENDING_RECONCILIATION')"]`
       ),
     selectAMReviewDD: () =>
       cy.xpath(`//*[@ng-click="changeViewBy($event, 'AM_REVIEW')"]`),
@@ -193,7 +193,7 @@ class orderPage {
       cy.xpath(`//*[@translate='inviosoApp.order.concerns.title']`),
     verifyVIitemCheckbox: () =>
       cy.xpath(
-        `//*[@id="vendorItemVerified"]//*[@class="icheckbox_minimal-blue"]`,
+        `//*[@id="vendorItemVerified"]//*[@class="icheckbox_minimal-blue"]`
       ),
     AMReviewCompleteCheckBox: () =>
       cy.xpath(`//*[@translate='inviosoApp.order.reconcile.closedLabel']`),
@@ -204,7 +204,7 @@ class orderPage {
     undeleteBtn: () => cy.xpath(`//*[@ng-click='undelete()']`),
     undeleteTextField: () =>
       cy.xpath(
-        `//*[@class='bootbox-input bootbox-input-text form-control'][@autocomplete='off']`,
+        `//*[@class='bootbox-input bootbox-input-text form-control'][@autocomplete='off']`
       ),
     undeleteConfirmBtn: () =>
       cy.xpath(`//*[@class='btn btn-primary bootbox-accept']`),
@@ -212,19 +212,19 @@ class orderPage {
       cy.xpath(`//*[@translate='inviosoApp.order.emailQueue.title']`),
     deleteConfirmClosedOrder: () =>
       cy.xpath(
-        `//*[@id='deleteOrderConfirmation']//*[@class='btn btn-danger'][@type='submit']`,
+        `//*[@id='deleteOrderConfirmation']//*[@class='btn btn-danger'][@type='submit']`
       ),
     cancelDeleteConfirmClosedOrder: () =>
       cy.xpath(
-        `//*[@name='deleteForm']//*[@class='modal-footer']//*[@type='button']`,
+        `//*[@name='deleteForm']//*[@class='modal-footer']//*[@type='button']`
       ),
     checkDeleteConfirmText: () =>
       cy.xpath(
-        `//*[@class='alert alert-info']//*[contains(text(),'Before you delete this invoice please attempt to input the invoice date, invoice number, or vendor name.')]`,
+        `//*[@class='alert alert-info']//*[contains(text(),'Before you delete this invoice please attempt to input the invoice date, invoice number, or vendor name.')]`
       ),
     missingProdTxt: () =>
       cy.xpath(
-        `//span[text()='One or more Products on this order are missing categories.']`,
+        `//span[text()='One or more Products on this order are missing categories.']`
       ),
     moreOptionsDropupBtn: () =>
       cy.get(`[data-testid="orderMoreOptionsButton"]`),
@@ -239,44 +239,44 @@ class orderPage {
     sortList: () => cy.xpath(`(//div[@ng-keydown="handleKeyDown($event)"])[8]`),
     reconCredit: () =>
       cy.xpath(
-        `(//div[@class="ui-grid-cell-contents ng-binding ng-scope"])[6]`,
+        `(//div[@class="ui-grid-cell-contents ng-binding ng-scope"])[6]`
       ),
     enterCredit: () => cy.get(`input[ng-model="row.entity['unitPrice']"]`),
     orderPageBtnsHolder: () => cy.xpath(`//*[@class='well well-sm']`),
     addInvoiceDD: () =>
       cy.xpath(
-        `//*[@class='dropdown']//*[@class='btn btn-md btn-primary dropdown-toggle']`,
+        `//*[@class='dropdown']//*[@class='btn btn-md btn-primary dropdown-toggle']`
       ),
     missingInvoiceNumberText: () =>
       cy.xpath(
-        `//*[@class='btn btn-primary bootbox-accept'][contains(text(),'OK')]`,
+        `//*[@class='btn btn-primary bootbox-accept'][contains(text(),'OK')]`
       ),
     exportAsDD: () => cy.get(`#orderExportDD`),
     concernResolved: () =>
       cy.xpath(
-        `//div[@ng-switch-when='MISSING_INVOICE_PAGE']//div[@class='icheckbox_minimal-blue']`,
+        `//div[@ng-switch-when='MISSING_INVOICE_PAGE']//div[@class='icheckbox_minimal-blue']`
       ),
     exportCSV: () => cy.xpath(`//*[@ng-click="exportGrid($event, 'csv')"]`),
     clickOKBtnOnVerify: () => cy.get(`button[ng-hide="verifyingForClose"]`),
     warningInvoiceDate: () =>
       cy.xpath(
-        `//*[@ng-show='!order.initialReviewInvoiceDate && initialReviewComplete']`,
+        `//*[@ng-show='!order.initialReviewInvoiceDate && initialReviewComplete']`
       ),
     warningInvoiceDateRec: () =>
       cy.xpath(`//*[@ng-show='!order.invoiceDate && reconciliationComplete']`),
     warningVerifiedTotal: () =>
       cy.xpath(
-        `//div[@ng-show='!_.isFinite(order.initialReviewTotal) && initialReviewComplete']`,
+        `//div[@ng-show='!_.isFinite(order.initialReviewTotal) && initialReviewComplete']`
       ),
     warningVendorRequired: () =>
       cy.xpath(`//div[@ng-show='!order.vendor && initialReviewComplete']`),
     warningHandWritten: () =>
       cy.xpath(
-        `//*[@ng-show='order.initialReviewHandwrittenMarkup === undefined && initialReviewComplete']`,
+        `//*[@ng-show='order.initialReviewHandwrittenMarkup === undefined && initialReviewComplete']`
       ),
     warningHandWrittenRec: () =>
       cy.xpath(
-        `//*[@ng-show='order.handwrittenMarkup === undefined && reconciliationComplete']`,
+        `//*[@ng-show='order.handwrittenMarkup === undefined && reconciliationComplete']`
       ),
     orderStatusNew: () => cy.xpath(`(//*[@name='status'])[3]`),
     orderStatusSaved: () => cy.xpath(`(//*[@name='status'])[1]`),
@@ -302,21 +302,17 @@ class orderPage {
     stateField: () => cy.get(`#state`),
     zipCodeField: () => cy.get(`#zip`),
     mobileField: () => cy.get(`#phone`),
-    warningHandWrittenRec: () =>
-      cy.xpath(
-        `//*[@ng-show='order.handwrittenMarkup === undefined && reconciliationComplete']`,
-      ),
     differentVendorWarning: () =>
       cy.xpath(
-        `//div[contains(text(),'The vendor you selected is different than the vend')]`,
+        `//div[contains(text(),'The vendor you selected is different than the vend')]`
       ),
     differentVendorWarningOkBtn: () =>
       cy.xpath(
-        `//div[@role='dialog']//div[@class='modal-dialog']//button[@type='button'][normalize-space()='OK']`,
+        `//div[@role='dialog']//div[@class='modal-dialog']//button[@type='button'][normalize-space()='OK']`
       ),
     skipInvoiceWarning: () =>
       cy.xpath(
-        `//div[@class='bootbox-body'][contains(text(),'Please do not skip invoices without asking a question first. If there is a reason you need to skip this invoice please ask a question so there is a log of why this invoice could not be processed.')]`,
+        `//div[@class='bootbox-body'][contains(text(),'Please do not skip invoices without asking a question first. If there is a reason you need to skip this invoice please ask a question so there is a log of why this invoice could not be processed.')]`
       ),
     activeConcernWarning: () => cy.xpath(`//*[@ng-show='hasActiveConcern()']`),
     resolveConcern: () =>
@@ -330,21 +326,17 @@ class orderPage {
     deleteForm: () => cy.get(`[name='deleteForm']`),
     addressForm: () => cy.get(`[name='editForm']`),
     unitReporterDatePicker: () => cy.get(`#unitReportDatePicker`),
-    warningHandWrittenRec: () =>
-      cy.xpath(
-        `//*[@ng-show='order.handwrittenMarkup === undefined && reconciliationComplete']`,
-      ),
     differentVendorWarning: () =>
       cy.xpath(
-        `//div[contains(text(),'The vendor you selected is different than the vend')]`,
+        `//div[contains(text(),'The vendor you selected is different than the vend')]`
       ),
     differentVendorWarningOkBtn: () =>
       cy.xpath(
-        `//div[@role='dialog']//div[@class='modal-dialog']//button[@type='button'][normalize-space()='OK']`,
+        `//div[@role='dialog']//div[@class='modal-dialog']//button[@type='button'][normalize-space()='OK']`
       ),
     skipInvoiceWarning: () =>
       cy.xpath(
-        `//div[@class='bootbox-body'][contains(text(),'Please do not skip invoices without asking a question first. If there is a reason you need to skip this invoice please ask a question so there is a log of why this invoice could not be processed.')]`,
+        `//div[@class='bootbox-body'][contains(text(),'Please do not skip invoices without asking a question first. If there is a reason you need to skip this invoice please ask a question so there is a log of why this invoice could not be processed.')]`
       ),
     okBtnPhotoDel: () => cy.xpath(`//button[contains(text(),'OK')]`),
     closeBtn: () => cy.xpath(`//button[@class='bootbox-close-button close']`),
@@ -392,7 +384,7 @@ class orderPage {
     recociliationSourceLabel: () => cy.get(`#sourceLabel`),
     importedLineItem: (colorClass) =>
       cy.xpath(
-        `//button[@data-testid='importedLineItem'][contains(@class,'${colorClass}')]`,
+        `//button[@data-testid='importedLineItem'][contains(@class,'${colorClass}')]`
       ),
     vpuRatioChange: () => cy.get(`input[ng-change='ratioChange(vpu)']`),
     updateImportedItemSavebtn: () =>
@@ -403,11 +395,11 @@ class orderPage {
     resetSelectedLineItem: () => cy.get(`[ng-click='resetRows()']`),
     packagingRadioBtn: (nth) =>
       cy.xpath(
-        `(//*[@data-testid='packagingMatchRadio']//*[contains(@class,'iradio_minimal-blue')])[${nth}]`,
+        `(//*[@data-testid='packagingMatchRadio']//*[contains(@class,'iradio_minimal-blue')])[${nth}]`
       ),
     itemTotalMismatchNote: () =>
       cy.xpath(
-        `//*[text()='The imported total does not match the line item total.']`,
+        `//*[text()='The imported total does not match the line item total.']`
       ),
     viewOrderText: () => cy.xpath(`//a[text()='View Order']`),
     verifyOrderPreprocessingtext: () =>
@@ -415,23 +407,23 @@ class orderPage {
         .get(`.modal-body>.bootbox-body`)
         .should(
           "include.text",
-          "Are you sure you want to end preprocessing for this order?",
+          "Are you sure you want to end preprocessing for this order?"
         ),
     verifyUploadInvText: () => cy.get(`h4.modal-title.ng-scope`),
     confirmDeleteAndSendEmailTxt2: () =>
       cy.xpath(
-        `//*[@class='bootbox-body'][contains(text(),'Confirm that you would like to delete and send an email notification concerning this order.')]`,
+        `//*[@class='bootbox-body'][contains(text(),'Confirm that you would like to delete and send an email notification concerning this order.')]`
       ),
     concernAssignedToLeadAnalyst: () =>
       cy
         .xpath(
-          `//*[@ng-options='role.value as role.name for role in assignableOptions']`,
+          `//*[@ng-options='role.value as role.name for role in assignableOptions']`
         )
         .select("string:ROLE_LEAD_ANALYST"),
     reassignTask: () => cy.xpath(`//*[@ng-click='reassignSelected()']`),
     reassignAdded: () =>
       cy.xpath(
-        `//*[@ng-options='role.value as role.name for role in assignableOptions']`,
+        `//*[@ng-options='role.value as role.name for role in assignableOptions']`
       ),
     reassignSave: () =>
       cy.xpath(`//*[@ng-disabled='bulkReassignForm.$invalid']`),
@@ -459,15 +451,15 @@ class orderPage {
     closedInvoiceNumber: () => cy.xpath(`//input[@name='invoiceNum']`),
     differentVendorWarning: () =>
       cy.xpath(
-        `//div[contains(text(),'The vendor you selected is different than the vend')]`,
+        `//div[contains(text(),'The vendor you selected is different than the vend')]`
       ),
     differentVendorWarningOkBtn: () =>
       cy.xpath(
-        `//div[@role='dialog']//div[@class='modal-dialog']//button[@type='button'][normalize-space()='OK']`,
+        `//div[@role='dialog']//div[@class='modal-dialog']//button[@type='button'][normalize-space()='OK']`
       ),
     skipInvoiceWarning: () =>
       cy.xpath(
-        `//div[@class='bootbox-body'][contains(text(),'Please do not skip invoices without asking a question first. If there is a reason you need to skip this invoice please ask a question so there is a log of why this invoice could not be processed.')]`,
+        `//div[@class='bootbox-body'][contains(text(),'Please do not skip invoices without asking a question first. If there is a reason you need to skip this invoice please ask a question so there is a log of why this invoice could not be processed.')]`
       ),
     activeConcernWarning: () => cy.xpath(`//*[@ng-show='hasActiveConcern()']`),
     resolveConcern: () =>
@@ -501,20 +493,20 @@ class orderPage {
       cy.xpath(`//span[normalize-space()='None of the above match.']`),
     packagingName: () =>
       cy.xpath(
-        `//input[@class='form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched']`,
+        `//input[@class='form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched']`
       ),
     packagingUnit: () =>
       cy.xpath(
-        `//div[@id='packagingUnit']//span[@class='ui-select-placeholder text-muted ng-binding'][normalize-space()='Enter a unit...']`,
+        `//div[@id='packagingUnit']//span[@class='ui-select-placeholder text-muted ng-binding'][normalize-space()='Enter a unit...']`
       ),
     selectBagOption: () => cy.xpath(`//div[contains(text(),'Bag')]`),
     packagingRatio: () =>
       cy.xpath(
-        `//*[@ng-disabled='newReconcileLineItem.searchedItem.allPackagingData.length > 0 && ( ! (newReconcileLineItem.noMatch || newReconcileLineItem.ratioOneUnit))']`,
+        `//*[@ng-disabled='newReconcileLineItem.searchedItem.allPackagingData.length > 0 && ( ! (newReconcileLineItem.noMatch || newReconcileLineItem.ratioOneUnit))']`
       ),
     checkFR: () =>
       cy.xpath(
-        `//span[normalize-space()='This order has been reviewed and should be closed.']`,
+        `//span[normalize-space()='This order has been reviewed and should be closed.']`
       ),
     checkVerifyVI: () =>
       cy.xpath(`//tr[@class='ng-scope']//div[@class='icheckbox_minimal-blue']`),
@@ -527,13 +519,13 @@ class orderPage {
       cy.xpath(`//button[normalize-space()='Exact Match']`),
     addInvPreProcessing: () =>
       cy.xpath(
-        `//*[@class='btn btn-success btn-xs ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty']`,
+        `//*[@class='btn btn-success btn-xs ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty']`
       ),
     customerNumMismatch: () =>
       cy.xpath(`//*[@ng-show='recommendSettingVendorAccountNumber()']`),
     invoiceApprovalOn: () =>
       cy.xpath(
-        `//span[contains(text(),'All - All invoices will require approval before pr')]`,
+        `//span[contains(text(),'All - All invoices will require approval before pr')]`
       ),
     invoiceApprovalOff: () =>
       cy.get(`span[translate='inviosoApp.order.invoiceApproval.setup.off']`),
@@ -541,17 +533,17 @@ class orderPage {
       cy.xpath(`//button[@class='btn btn-primary btn-xs']`),
     checkOriginalHandWrittendAdjustmentsOrder: () =>
       cy.xpath(
-        `//div[@id='reconcileDetailModal']//span[@class='ng-scope'][normalize-space()='This line has a handwritten adjustment.']`,
+        `//div[@id='reconcileDetailModal']//span[@class='ng-scope'][normalize-space()='This line has a handwritten adjustment.']`
       ),
     originalUnitPrice: () =>
       cy.xpath(
-        `//input[@ng-model='reconcileLineItemDetail.originalUnitPrice']`,
+        `//input[@ng-model='reconcileLineItemDetail.originalUnitPrice']`
       ),
     originalUnitQuantity: () =>
       cy.xpath(`//input[@ng-model='reconcileLineItemDetail.originalQuantity']`),
     saveHandwrittenAdjustment: () =>
       cy.xpath(
-        `//button[@ng-disabled='reconcileLineItemDetail.hasMarkup && ( ! (_.isFinite(reconcileLineItemDetail.originalQuantity) && _.isFinite(reconcileLineItemDetail.originalUnitPrice)))']`,
+        `//button[@ng-disabled='reconcileLineItemDetail.hasMarkup && ( ! (_.isFinite(reconcileLineItemDetail.originalQuantity) && _.isFinite(reconcileLineItemDetail.originalUnitPrice)))']`
       ),
     otherAccount: () =>
       cy
@@ -559,10 +551,21 @@ class orderPage {
         .select(`znewPaymentAcc`),
     packageName: () =>
       cy.xpath(
-        `//table[@class='table table-condensed']//tbody[last()]//tr[last()]//td[position()=1]//input[@class='form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched']`,
+        `//table[@class='table table-condensed']//tbody[last()]//tr[last()]//td[position()=1]//input[@class='form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched']`
       ),
     cancelBtn: () => cy.get(`.bootbox-close-button.close`),
     invoiceApprovalSetupBtn: () => cy.get(`#invoiceApprovalSetupBtn`),
+    analystWarningRec: () =>
+      cy.get(
+        `span[translate='inviosoApp.order.reconcile.cantCloseTotalVerificationLabel']`
+      ),
+    greatJobOrderVerificationRec: () =>
+      cy.xpath(
+        `//*[@translate='inviosoApp.order.verification.noOrderConcerns']`
+      ),
+    selectReason: () => cy.get(`[ng-repeat="r in orderDeleteReason"]`).first(),
+    addReason: () => cy.get(`[ng-model="order.statusNote"]`),
+    resConcern: () => cy.xpath(`//*[@class="ng-binding icheck-label"]`)
   };
 
   assignToLeadAnalyst() {
@@ -677,11 +680,11 @@ class orderPage {
     cy.wait(3000);
     this.element.vendorItemVerified().click(
       {
-        force: true,
+        force: true
       },
       {
-        multiple: true,
-      },
+        multiple: true
+      }
     );
     this.element.AMReviewCompleteCheckBox().should("be.visible").click();
     this.element.saveBtnRecon().should("not.be.disabled").click();
@@ -704,11 +707,11 @@ class orderPage {
     cy.wait(3000);
     this.element.vendorInfoRadio().click(
       {
-        force: true,
+        force: true
       },
       {
-        multiple: true,
-      },
+        multiple: true
+      }
     );
     this.element.amReviewCheck().click();
     this.element.saveBtnRecon().click();
@@ -722,7 +725,7 @@ class orderPage {
       .finalReviewStatusTitle()
       .should("contain.text", "Final Review");
     this.element.clickLineItemBtn().should("be.visible").click({
-      force: true,
+      force: true
     });
     this.element.newVendorItemRadio().should("be.visible").click();
     this.element.itemCode().type(itemCodeStr);
@@ -748,7 +751,7 @@ class orderPage {
   finalReviewProcessVerification(itemCodeStr, vIName, prodName) {
     cy.wait(6000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.newVendorItemRadio().click();
     this.element.itemCode().type(itemCodeStr);
@@ -777,7 +780,7 @@ class orderPage {
       .finalReviewStatusTitle()
       .should("contain.text", "Final Review");
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.newVendorItemRadio().click();
     this.element.itemCode().type(itemCodeStr);
@@ -879,7 +882,7 @@ class orderPage {
   }
 
   searchOrderWithoutsorting(orderName) {
-    this.element.filterOption().should("be.visible").clear();
+    this.element.filterOption().should("be.visible").clear().type(orderName);
     cy.wait(2000);
     this.element.clickItem().should("be.visible").click();
     cy.wait(1000);
@@ -1034,7 +1037,7 @@ class orderPage {
           cy.wait(3000);
           this.element.clickVendor().should("be.visible").click();
           this.element.selectDDItem().should("be.visible").click({
-            multiple: true,
+            multiple: true
           });
           this.element.invoiceNumber().type(invoiceNumberStr);
           this.element.invoiceDate().click();
@@ -1066,7 +1069,7 @@ class orderPage {
           this.irProcessWithTenantCheck(
             unitName,
             invoiceNumberStr,
-            customerNameStr,
+            customerNameStr
           );
         }
       });
@@ -1080,7 +1083,7 @@ class orderPage {
         cy.wait(3000);
         this.element.clickVendor().click();
         this.element.selectVendorJFCDD().should("be.visible").click({
-          multiple: true,
+          multiple: true
         });
         this.element.invoiceNumber().type(invoiceNumberStr);
         this.element.invoiceDate().click();
@@ -1109,7 +1112,7 @@ class orderPage {
         this.irProcessWithTenantCheck(
           unitName,
           invoiceNumberStr,
-          customerNameStr,
+          customerNameStr
         );
       }
     });
@@ -1148,7 +1151,7 @@ class orderPage {
         this.irProcessWithTenantCheck(
           unitName,
           invoiceNumberStr,
-          customerNameStr,
+          customerNameStr
         );
       }
     });
@@ -1187,7 +1190,7 @@ class orderPage {
         this.irProcessWithTenantCheck(
           unitName,
           invoiceNumberStr,
-          customerNameStr,
+          customerNameStr
         );
       }
     });
@@ -1200,7 +1203,7 @@ class orderPage {
   ReconcialltionProcessWithTenantCheck(
     unitName,
     invoiceNumberStr,
-    customerNameStr,
+    customerNameStr
   ) {
     loginPageObjects.element
       .storeToggle()
@@ -1213,7 +1216,7 @@ class orderPage {
           cy.wait(3000);
           this.element.clickVendor().should("be.visible").click();
           this.element.selectDDItem().click({
-            multiple: true,
+            multiple: true
           });
           this.element.invoiceNumberRecon().type(invoiceNumberStr);
           this.element.invoiceDateRecon().click();
@@ -1239,6 +1242,7 @@ class orderPage {
             });
           this.element.saveBtnRecon().should("not.be.disabled").click();
           cy.wait(3000);
+          this.element.greatJobOrderVerificationRec().should("be.visible");
           this.element.verifyBtn().should("be.visible").click();
           cy.wait(3000);
         } else {
@@ -1251,7 +1255,7 @@ class orderPage {
           this.irProcessWithTenantCheck(
             unitName,
             invoiceNumberStr,
-            customerNameStr,
+            customerNameStr
           );
         }
       });
@@ -1260,7 +1264,7 @@ class orderPage {
   ReconcialltionProcessWithTenantCheckAndJFC(
     unitName,
     invoiceNumberStr,
-    customerNameStr,
+    customerNameStr
   ) {
     cy.get("#unitMenu_dd").then(($el) => {
       // $el is a jQuery object
@@ -1270,7 +1274,7 @@ class orderPage {
         cy.wait(3000);
         this.element.clickVendor().click();
         this.element.selectVendorJFCDD().click({
-          multiple: true,
+          multiple: true
         });
         this.element.invoiceNumberRecon().type(invoiceNumberStr);
         this.element.invoiceDateRecon().click();
@@ -1298,7 +1302,7 @@ class orderPage {
         this.irProcessWithTenantCheck(
           unitName,
           invoiceNumberStr,
-          customerNameStr,
+          customerNameStr
         );
       }
     });
@@ -1336,7 +1340,7 @@ class orderPage {
         this.irProcessWithTenantCheck(
           unitName,
           invoiceNumberStr,
-          customerNameStr,
+          customerNameStr
         );
       }
     });
@@ -1345,7 +1349,7 @@ class orderPage {
   ReconcialltionProcessWithDifferentVendor(
     unitName,
     invoiceNumberStr,
-    customerNameStr,
+    customerNameStr
   ) {
     cy.get("#unitMenu_dd").then(($el) => {
       // $el is a jQuery object
@@ -1355,7 +1359,7 @@ class orderPage {
         cy.wait(3000);
         this.element.clickVendor().click();
         this.element.selectVendorJFCDD().click({
-          multiple: true,
+          multiple: true
         });
         //warning Vendor Miss Match
         this.element.differentVendorWarning().should("be.visible");
@@ -1446,17 +1450,17 @@ class orderPage {
     invoiceNumberStr,
     itemCodeStr,
     vIName,
-    prodName,
+    prodName
   ) {
     this.element.invoiceNumberRecon().type(invoiceNumberStr);
     this.element.invoiceDateRecon().click();
     this.element.todayDate().click();
     cy.wait(3000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.newVendorItemRadio().click({
-      force: true,
+      force: true
     });
     this.element.itemCode().type(itemCodeStr);
     this.element.vendorItem().type(vIName);
@@ -1529,7 +1533,7 @@ class orderPage {
           this.irProcessWithTenantCheckAdmin(
             unitName,
             vendorName,
-            invoiceNumberStr,
+            invoiceNumberStr
           );
         }
       });
@@ -1539,7 +1543,7 @@ class orderPage {
   ReconcialltionProcessWithTenantCheckAdmin(
     unitName,
     vendorName,
-    invoiceNumberStr,
+    invoiceNumberStr
   ) {
     loginPageObjects.element
       .storeToggle()
@@ -1585,7 +1589,7 @@ class orderPage {
     unitName,
     vendorName,
     existingVI,
-    invoiceNumberStr,
+    invoiceNumberStr
   ) {
     cy.wait(3000);
     loginPageObjects.element
@@ -1666,8 +1670,11 @@ class orderPage {
       .should("contain.text", "Source: Uploaded");
     this.element.endPreProcessingBTN().should("be.visible").click();
     this.element.verifyOrderPreprocessingtext();
-    cy.wait(500);
-    this.element.okBtn().should("be.visible").click();
+    cy.wait(1500);
+    this.element
+      .okBtn()
+      .should("be.visible")
+      .click({ multiple: true, force: true });
     this.element.openDDForOrderStatus().should("be.visible");
   }
 
@@ -1725,11 +1732,11 @@ class orderPage {
     cy.wait(3000);
     this.element.verifyVIitemCheckbox().should("be.visible").click(
       {
-        force: true,
+        force: true
       },
       {
-        multiple: true,
-      },
+        multiple: true
+      }
     );
     cy.wait(2000);
     this.element.AMReviewCompleteCheckBox().should("be.visible").click();
@@ -1834,7 +1841,7 @@ class orderPage {
     this.element.clickVendor().should("be.visible").click();
     this.element.enterVendorName().clear().type(vendorName, { delay: 0 });
     this.element.selectDDItem().should("be.visible").click({
-      multiple: true,
+      multiple: true
     });
     this.element.recipientField().should("not.exist");
     this.element.invoiceNumber().type(invoiceNumberStr);
@@ -1859,17 +1866,17 @@ class orderPage {
     cy.wait(2000);
     this.element.clickVendorRecon().click();
     this.element.selectDDItem().should("be.visible").click({
-      multiple: true,
+      multiple: true
     });
     this.element.invoiceNumberRecon().type(invoiceNumberStr);
     this.element.invoiceDateRecon().click();
     this.element.todayDate().click();
     cy.wait(3000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.newVendorItemRadio().click({
-      force: true,
+      force: true
     });
     this.element.itemCode().type(itemCodeStr);
     this.element.vendorItem().type(vIName);
@@ -1894,7 +1901,7 @@ class orderPage {
     cy.wait(2000);
     this.element.clickVendorRecon().should("be.visible").click();
     this.element.selectDDItem().should("be.visible").click({
-      multiple: true,
+      multiple: true
     });
     this.element
       .invoiceNumberRecon()
@@ -1942,7 +1949,7 @@ class orderPage {
       .should("include.text", "Final Review");
     // close it again
     this.element.reOpenedOrderCompleteCheck().click({
-      force: true,
+      force: true
     });
     this.element.saveBtnRecon().should("not.be.disabled").click();
     cy.wait(3000);
@@ -1969,7 +1976,7 @@ class orderPage {
           cy.wait(3000);
           this.element.clickVendor().should("be.visible").click();
           this.element.selectDDItem().should("be.visible").click({
-            multiple: true,
+            multiple: true
           });
           this.element.invoiceNumberRecon().type(invoiceNumberStr);
           this.element.invoiceDateRecon().click();
@@ -2012,7 +2019,7 @@ class orderPage {
           this.irProcessWithTenantCheck(
             unitName,
             invoiceNumberStr,
-            customerNameStr,
+            customerNameStr
           );
         }
       });
@@ -2021,7 +2028,7 @@ class orderPage {
   irProcessWithTenantCheckBelowPrice(
     unitName,
     invoiceNumberStr,
-    customerNameStr,
+    customerNameStr
   ) {
     loginPageObjects.element
       .storeToggle()
@@ -2033,7 +2040,7 @@ class orderPage {
           cy.wait(3000);
           this.element.clickVendor().should("be.visible").click();
           this.element.selectDDItem().should("be.visible").click({
-            multiple: true,
+            multiple: true
           });
           this.element.invoiceNumber().type(invoiceNumberStr);
           this.element.invoiceDate().click();
@@ -2065,7 +2072,7 @@ class orderPage {
           this.irProcessWithTenantCheck(
             unitName,
             invoiceNumberStr,
-            customerNameStr,
+            customerNameStr
           );
         }
       });
@@ -2074,7 +2081,7 @@ class orderPage {
   ReconcialltionAndAddingLineItemBelowPrice(
     unitName,
     invoiceNumberStr,
-    customerNameStr,
+    customerNameStr
   ) {
     loginPageObjects.element
       .storeToggle()
@@ -2087,7 +2094,7 @@ class orderPage {
           cy.wait(3000);
           this.element.clickVendor().should("be.visible").click();
           this.element.selectDDItem().should("be.visible").click({
-            multiple: true,
+            multiple: true
           });
           this.element.invoiceNumberRecon().type(invoiceNumberStr);
           this.element.invoiceDateRecon().click();
@@ -2134,7 +2141,7 @@ class orderPage {
           this.irProcessWithTenantCheck(
             unitName,
             invoiceNumberStr,
-            customerNameStr,
+            customerNameStr
           );
         }
       });
@@ -2323,7 +2330,7 @@ class orderPage {
       dateData.year,
       dateData.month,
       dateData.day,
-      "-",
+      "-"
     );
     this.uploadDate().should("have.value", formattedDate);
   }
@@ -2365,7 +2372,7 @@ class orderPage {
       dateData.year,
       dateData.month,
       dateData.day,
-      "-",
+      "-"
     );
     this.element.uploadDate().should("have.value", formattedDate);
     this.element.orderStatusSaved().should("have.value", "Saved");
@@ -2401,7 +2408,7 @@ class orderPage {
 
   changeStatusToPreprocessing() {
     cy.intercept("GET", "/api/orders*status=PREPROCESSING*").as(
-      "preprocessingOrder",
+      "preprocessingOrder"
     );
     this.element.openDDForOrderStatus().should("be.visible").click();
     this.element.selectPreprocessingDD().should("be.visible").click();
@@ -2477,7 +2484,7 @@ class orderPage {
     newVendor,
     invoiceNumberStr,
     packaging,
-    address,
+    address
   ) {
     loginPageObjects.element
       .storeToggle()
@@ -2517,7 +2524,7 @@ class orderPage {
     vendorItemName,
     invoiceNumberStr,
     packaging,
-    address,
+    address
   ) {
     loginPageObjects.element
       .storeToggle()
@@ -2716,7 +2723,7 @@ class orderPage {
     cy.get(`#helpArticle > a`).should(
       "have.attr",
       "href",
-      testData.vendorSetupURL,
+      testData.vendorSetupURL
     );
   }
 
@@ -2885,7 +2892,7 @@ class orderPage {
       .FinalReviewCompleteCheck()
       .should(
         "include.text",
-        "This order has been reviewed and should be reviewed by a Client Services Lead.",
+        "This order has been reviewed and should be reviewed by a Client Services Lead."
       )
       .click();
     this.element.saveBtnRecon().should("not.be.disabled").click();
@@ -2901,7 +2908,7 @@ class orderPage {
     this.element.clickVendor().should("be.visible").click();
     this.element.enterVendorName().clear().type(vendorName);
     this.element.selectDDItem().should("be.visible").click({
-      multiple: true,
+      multiple: true
     });
     this.element
       .invoiceNumber()
@@ -3029,7 +3036,7 @@ class orderPage {
       .clear()
       .type(createVendorName);
     this.element.selectDDItem().should("be.visible").click({
-      multiple: true,
+      multiple: true
     });
     this.element.invoiceNumber().type(invoiceNumberStr);
     this.element.invoiceDate().click();
@@ -3142,17 +3149,17 @@ class orderPage {
   finalReviewProcessNewPackagingOption() {
     cy.wait(6000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.addExistingLineItem().click();
     this.element.addExistingLineItem().type("op");
     this.element.selectDDItem().click(
       {
-        multiple: true,
+        multiple: true
       },
       {
-        force: true,
-      },
+        force: true
+      }
     );
     cy.wait(1000);
     this.element.input().type("30");
@@ -3175,17 +3182,17 @@ class orderPage {
   finalReviewProcessExistingPackagingOption() {
     cy.wait(6000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.addExistingLineItem().click();
     this.element.addExistingLineItem().type("op");
     this.element.selectDDItem().click(
       {
-        multiple: true,
+        multiple: true
       },
       {
-        force: true,
-      },
+        force: true
+      }
     );
     cy.wait(1000);
     this.element.input().type("1");
@@ -3205,17 +3212,17 @@ class orderPage {
   reconProcessNewPackagingOption() {
     cy.wait(6000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.addExistingLineItem().click();
     this.element.addExistingLineItem().type("YAMASHIN");
     this.element.selectDDItem().click(
       {
-        multiple: true,
+        multiple: true
       },
       {
-        force: true,
-      },
+        force: true
+      }
     );
     cy.wait(1000);
     this.element.input().type("30");
@@ -3235,17 +3242,17 @@ class orderPage {
   reconProcessSamePackagingOption() {
     cy.wait(6000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.addExistingLineItem().click();
     this.element.addExistingLineItem().type("YAMASHIN");
     this.element.selectDDItem().click(
       {
-        multiple: true,
+        multiple: true
       },
       {
-        force: true,
-      },
+        force: true
+      }
     );
     cy.wait(1000);
     this.element.input().type("1");
@@ -3276,10 +3283,10 @@ class orderPage {
   finalReviewProcessWithoutProduct(vIName) {
     cy.wait(2000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.newVendorItemRadio().click({
-      force: true,
+      force: true
     });
     this.element.itemCode().type("Item002");
     this.element.vendorItem().type(vIName);
@@ -3300,17 +3307,17 @@ class orderPage {
   finalReviewProcessNewPackOption() {
     cy.wait(6000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.addExistingLineItem().click();
     this.element.addExistingLineItem().type("Item002");
     this.element.selectDDItem().click(
       {
-        multiple: true,
+        multiple: true
       },
       {
-        force: true,
-      },
+        force: true
+      }
     );
     cy.wait(1000);
     this.element.input().type("30");
@@ -3362,7 +3369,7 @@ class orderPage {
     this.element.clickVendor().should("be.visible").click();
     this.element.enterVendorName().clear().type(vendorName, { delay: 0 });
     this.element.selectDDItem().should("be.visible").click({
-      multiple: true,
+      multiple: true
     });
     this.element.invoiceNumber().type(newInvoiceNum);
     this.element.invoiceDate().click();
@@ -3370,7 +3377,7 @@ class orderPage {
   recInvoiceNumber(newInvoiceNum) {
     this.element.clickVendor().click();
     this.element.selectDDItem().should("be.visible").click({
-      multiple: true,
+      multiple: true
     });
     this.element.invoiceNumberRecon().type(newInvoiceNum);
     this.element.invoiceDateRecon().click();
@@ -3430,7 +3437,7 @@ class orderPage {
   finalReviewProcessOnlyVIAdd(itemCodeStr, vIName, prodName) {
     cy.wait(6000);
     this.element.clickLineItemBtn().click({
-      force: true,
+      force: true
     });
     this.element.newVendorItemRadio().click();
     this.element.itemCode().type(itemCodeStr);
@@ -3484,8 +3491,85 @@ class orderPage {
     cy.wait(1000);
     this.element.IRSaveBtn().click();
     cy.wait(1000);
-    this.element.okBtn().click();
+    this.element.okBtn().click(); //saveBtnRecon
     cy.wait(3000);
+  }
+
+  checkAnalystCompleteRec() {
+    cy.wait(3000);
+    this.element
+      .recociliationSourceLabel()
+      .should("include.text", "Source: Uploaded");
+    this.element.analystWarningRec().should("be.visible");
+    this.element.saveBtnRecon().should("be.disabled");
+    cy.wait(3000);
+  }
+
+  raiseConcernForRecon(raiseConcernType, text) {
+    this.element.askQues().click();
+    this.element.selectQuesType().click();
+    this.element.enterQuesType().type(raiseConcernType);
+    this.element.clickItemDD().click();
+    this.element.newConcern().type(text);
+    this.element.saveAndSkip().click();
+    cy.wait(1000);
+    this.element.saveBtnRecon().click();
+    cy.wait(1000);
+    this.element.okBtn().click(); //saveBtnRecon
+    cy.wait(3000);
+  }
+
+  checkConcern() {
+    this.element.concernExpander().should("be.visible").click();
+    cy.wait(2000);
+  }
+
+  checkAnalystCompleteRec() {
+    cy.wait(3000);
+    this.element
+      .recociliationSourceLabel()
+      .should("include.text", "Source: Uploaded");
+    this.element.analystWarningRec().should("be.visible");
+    this.element.saveBtnRecon().should("be.disabled");
+    cy.wait(3000);
+  }
+
+  checkConcernAndDelete(text) {
+    this.element.concernExpander().should("be.visible").click();
+    cy.wait(2000);
+  }
+
+  completeReconWithResolvingConcern(invoiceNumberStr) {
+    this.element.invoiceNumberRecon().type(invoiceNumberStr);
+    this.element.invoiceDateRecon().click();
+    this.element.todayDate().click();
+    this.element.concernExpander().click();
+    cy.wait(5000);
+    this.element.resConcern().click({ multiple: true });
+    cy.wait(1000);
+    //condition to check no address
+    cy.xpath(`//*[@name='editForm']`).then(($body) => {
+      if ($body.text().includes("No address is provided")) {
+        cy.get(`#noInfoPresent`).click();
+        cy.get(`#noPhonePresent`).click();
+      }
+    });
+    cy.wait(1000);
+    this.element.openDDRecon();
+    this.element.initialReviewCompleteCheck().click();
+    this.element.saveBtnRecon().click();
+    cy.wait(3000);
+    this.element.verifyBtn().click();
+    cy.wait(5000);
+  }
+
+  deleteOrder(text) {
+    cy.wait(2000);
+    this.element.deleteOrder().click();
+    cy.wait(1000);
+    this.element.selectReason().click();
+    this.element.addReason().first().type(text);
+    this.element.deleteConfirm().click();
   }
 }
 module.exports = new orderPage();

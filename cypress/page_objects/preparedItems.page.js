@@ -27,7 +27,7 @@ class preparedItemPage {
     uploadMedia: () => cy.xpath(`//*[@type='file']`),
     okButton: () => cy.get(`button[ng-click="photoDirectiveOkCallback()"]`),
     confirmDeleteBtn: () =>
-      cy.xpath(`//*[@class='btn btn-danger'][@type='submit']`),
+      cy.xpath(`//*[@class='btn btn-danger'][@type='submit']`)
   };
 
   createPreparedItems(name, typeName) {

@@ -2,11 +2,11 @@ class utilsMethod {
   element = {
     totalItemFooter: () =>
       cy.xpath(
-        `//*[@class='ui-grid-footer-info ui-grid-grid-footer ng-scope']//*[@class='ng-binding'] | //*[@data-testid='itemsCountDisplay']`,
+        `//*[@class='ui-grid-footer-info ui-grid-grid-footer ng-scope']//*[@class='ng-binding'] | //*[@data-testid='itemsCountDisplay']`
       ),
     tableRow: () => cy.xpath(`//*[@role='rowgroup']//*[@role='row']`),
     storeToggle: () => cy.get("#unitMenu_dd"),
-    tenantSearch: () => cy.wait(1000).get(`#searchTenant`),
+    tenantSearch: () => cy.wait(1000).get(`#searchTenant`)
   };
 
   makeId() {
@@ -135,5 +135,27 @@ class utilsMethod {
     let month = (date.getMonth() + 1).toString().padStart(2, "0");
     return new Date(year, month, 0).getDate();
   }
+
+  getFormDataObj = (obj) => {
+    const formDataObj = new FormData();
+    Object.keys(obj).forEach((key) => {
+      const value = obj[key];
+      formDataObj.append(key, value);
+    });
+    return formDataObj;
+  };
+
+  getEpochTime = (noOfDaysToBeExtracted) => {
+    var date = new Date();
+    return date.setDate(date.getDate() - noOfDaysToBeExtracted);
+  };
+
+  getCustomUrl = (urlString) => {
+    const url = new URL(urlString);
+    const protocol = url.protocol;
+    const hostname = url.hostname;
+    const customUrl = protocol + "//" + hostname;
+    return customUrl;
+  };
 }
 module.exports = new utilsMethod();

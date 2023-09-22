@@ -1,0 +1,34 @@
+{
+  "token": {
+    "payload": {
+      "username": "{{username}}",
+      "password": "{{password}}",
+      "grant_type": "password",
+      "client_secret": "mySecretOAuthSecret",
+      "client_id": "inviosoapp"
+    }
+  },
+  "createOrder": {
+    "attachments": [],
+    "status": "{{status}}",
+    "orderDate": "2022-11-11",
+    "total": 0
+  },
+  "orderStatus": {
+    "IR": "INITIAL_REVIEW",
+    "preprocessing": "PREPROCESSING",
+    "reconciliation": "PENDING_RECONCILIATION",
+    "finalReview": "FINAL_REVIEW",
+    "closed": "CLOSED"
+  },
+  "paymentSystem": {
+    "accountsPayable": {
+      "id": 1,
+      "value": "Accounts Payable"
+    },
+    "check": {
+      "id": 1393,
+      "value": "Checking Account"
+    }
+  }
+}

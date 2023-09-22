@@ -36,7 +36,7 @@ module.exports = (on, config) => {
       savedData = x;
       return null;
     },
-    loadData: () => savedData,
+    loadData: () => savedData
   });
 
   on("task", {
@@ -44,7 +44,7 @@ module.exports = (on, config) => {
       const messages = await gmail_tester.get_messages(
         path.resolve(__dirname, "credentials.json"),
         path.resolve(__dirname, "gmail_token.json"),
-        args.options,
+        args.options
       );
       return messages;
     },
@@ -52,9 +52,9 @@ module.exports = (on, config) => {
       const messages = await gmail_tester.check_inbox(
         path.resolve(__dirname, "credentials.json"),
         path.resolve(__dirname, "gmail_token.json"),
-        args.options,
+        args.options
       );
       return messages;
-    },
+    }
   });
 };

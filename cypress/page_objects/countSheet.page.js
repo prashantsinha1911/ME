@@ -59,7 +59,7 @@ class countSheetPage {
       cy.get(`button[class='btn btn-primary'][ng-click='closeModal()']`),
     addCategoryProductRadio: () =>
       cy.get(
-        `span[translate='inviosoApp.inventorySetup.home.addCategoryRadio']`,
+        `span[translate='inviosoApp.inventorySetup.home.addCategoryRadio']`
       ),
     addCategoryInput: () => cy.get(`input[aria-label='Select a category']`),
     addCategoryProductBtn: () => cy.get(`[ng-click='addNewCategory($event)']`),
@@ -69,7 +69,7 @@ class countSheetPage {
     countByColumnHeader: () =>
       cy
         .xpath(
-          `//*[@translate='inviosoApp.inventorySetup.table.common.countBy']`,
+          `//*[@translate='inviosoApp.inventorySetup.table.common.countBy']`
         )
         .last(),
     firstProductName: () => cy.xpath(`(//*[@class='ng-binding'])[1]`),
@@ -79,11 +79,11 @@ class countSheetPage {
       cy.get(`[data-testid='productNameCS-${productName}']`),
     duplicateInventorySetupTxt: () =>
       cy.xpath(
-        `//div[@class='bootbox-body'][contains(text(),'A Count Sheet already exists with this name. Please select a unique name.')]`,
+        `//div[@class='bootbox-body'][contains(text(),'A Count Sheet already exists with this name. Please select a unique name.')]`
       ),
     cancelBtnCS: () =>
       cy.xpath(
-        `//button[@ng-click='editForm.$dirty || setupDirty ? showCancelModal() : discardChanges()']`,
+        `//button[@ng-click='editForm.$dirty || setupDirty ? showCancelModal() : discardChanges()']`
       ),
     radioBtnCS: () => cy.xpath(`//div[@id='newProductsModal']//label[2]`),
     selectCategory: () =>
@@ -94,20 +94,20 @@ class countSheetPage {
     deleteCS: () => cy.get(`[ng-click='delete()']`),
     confirmDeleteCS: () =>
       cy.xpath(
-        `//form[@ng-submit='confirmDelete(inventorySetup.id)']//button[@type='submit']`,
+        `//form[@ng-submit='confirmDelete(inventorySetup.id)']//button[@type='submit']`
       ),
     cannotEditCSWarningTxt: () =>
       cy.xpath(
-        `//div[@class='bootbox-body'][contains(text(),'There is an inventory in process (not in a closed status). Please close out any open inventories before editing the Count Sheet.  You can make any changes you require in the open inventory and those changes will be reflected in your Count Sheet after it is closed.')]`,
+        `//div[@class='bootbox-body'][contains(text(),'There is an inventory in process (not in a closed status). Please close out any open inventories before editing the Count Sheet.  You can make any changes you require in the open inventory and those changes will be reflected in your Count Sheet after it is closed.')]`
       ),
     refCSWarningTxt: () =>
       cy.xpath(
-        `//div[normalize-space()='Referenced by one or more inventories.']`,
+        `//div[normalize-space()='Referenced by one or more inventories.']`
       ),
     cannotEditCSWarningTxt: () =>
       cy.xpath(
-        `//div[@class='bootbox-body'][contains(text(),'There is an inventory in process (not in a closed status). Please close out any open inventories before editing the Count Sheet.  You can make any changes you require in the open inventory and those changes will be reflected in your Count Sheet after it is closed.')]`,
-      ),
+        `//div[@class='bootbox-body'][contains(text(),'There is an inventory in process (not in a closed status). Please close out any open inventories before editing the Count Sheet.  You can make any changes you require in the open inventory and those changes will be reflected in your Count Sheet after it is closed.')]`
+      )
   };
 
   createCountSheet(countSheetName, prodName, recipeName) {
@@ -143,7 +143,7 @@ class countSheetPage {
     sectionName,
     countSheetName,
     prodName,
-    recipeName,
+    recipeName
   ) {
     this.element.addNewCountSheet().click();
     this.element.countSheetName().type(countSheetName);
@@ -170,7 +170,7 @@ class countSheetPage {
     sectionName2,
     countSheetName,
     prodName,
-    recipeName,
+    recipeName
   ) {
     this.element.addNewCountSheet().should("be.visible").click();
     this.element.countSheetName().should("be.visible").type(countSheetName);
@@ -269,7 +269,7 @@ class countSheetPage {
     sectionName2,
     countSheetName,
     prodName,
-    recipeName,
+    recipeName
   ) {
     this.element.addNewCountSheet().should("be.visible").click();
     this.element.countSheetName().should("be.visible").type(countSheetName);
@@ -333,7 +333,7 @@ class countSheetPage {
       .existingSectionNote()
       .should(
         "have.text",
-        `Product already exists in the following sections: ${sectionName}`,
+        `Product already exists in the following sections: ${sectionName}`
       );
     this.element.saveProduct().should("not.be.disabled").click();
   }
@@ -355,7 +355,7 @@ class countSheetPage {
     countSheetName,
     sectionName,
     categoryName,
-    productName,
+    productName
   ) {
     this.element.addNewCountSheet().should("be.visible").click();
     this.element.countSheetName().should("be.visible").type(countSheetName);
@@ -426,7 +426,7 @@ class countSheetPage {
       dateObj.month,
       dateObj.day,
       dateObj.year,
-      "/",
+      "/"
     );
     this.setProductCount(productName);
     // restaurant column will be visible depending on the avilability of the vendor item on the units

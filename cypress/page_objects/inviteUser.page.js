@@ -6,7 +6,7 @@ class inviteuserPage {
     selectRole: () => cy.get('[name="role"]').select("Accountant"),
     selectMEAdmin: () =>
       cy.xpath(
-        `//*[@class="form-horizontal"]//*[@class="icheckbox_minimal-blue"]`,
+        `//*[@class="form-horizontal"]//*[@class="icheckbox_minimal-blue"]`
       ),
     inviteBtn: () => cy.xpath(`//span[text()='Invite']`),
     showDD: () => cy.xpath(`(//div[@ng-show="isInStaffRole()"])[1]`),
@@ -22,7 +22,7 @@ class inviteuserPage {
     firstName: () => cy.get(`[ng-model="user.firstName"]`),
     acceptInvite: () =>
       cy.xpath(
-        `//*[@class="checkbox-inline icheck-label"]//*[text()='User invite accepted']`,
+        `//*[@class="checkbox-inline icheck-label"]//*[text()='User invite accepted']`
       ),
     resetPassword: () =>
       cy.xpath(`//*[@translate='inviosoApp.user.home.changePasswordLabel']`),
@@ -31,7 +31,7 @@ class inviteuserPage {
     accpetBtn: () => cy.get(`.btn.btn-primary.bootbox-accept`),
     revokeAccess: () => cy.get(`button[ng-click="remove()"]`),
     revokeAccessConfirm: () => cy.xpath(`(//span[text()='Remove Access'])[2]`),
-    phoneField: () => cy.get(`[name='phoneNumber']`),
+    phoneField: () => cy.get(`[name='phoneNumber']`)
   };
 
   changeRole() {

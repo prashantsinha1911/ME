@@ -18,7 +18,7 @@ class setupPage {
     dateField: () => cy.get(`[name='date']`),
     deleteConfirmBtn: () =>
       cy.xpath(`//*[@class='btn btn-danger'][@type='submit']`),
-    deleteBtn: () => cy.get(`button[ng-click='delete()']`),
+    deleteBtn: () => cy.get(`button[ng-click='delete()']`)
   };
 
   enableFlag() {

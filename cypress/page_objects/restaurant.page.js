@@ -33,9 +33,9 @@ class restaurantPage {
       cy.xpath(`//*[@class='ng-binding ng-scope'][.='Alabama']`),
     selectCountry: () =>
       cy.xpath(
-        `//*[@aria-label='Select a country activate']//*[contains(@class,'ui-select-match-text')]`,
+        `//*[@aria-label='Select a country activate']//*[contains(@class,'ui-select-match-text')]`
       ),
-    emailLabel: () => cy.get(`.ng-scope[translate='inviosoApp.user.email']`),
+    emailLabel: () => cy.get(`.ng-scope[translate='inviosoApp.user.email']`)
   };
 
   createRestaurant(
@@ -45,7 +45,7 @@ class restaurantPage {
     emailID,
     loginID,
     strfName,
-    strlName,
+    strlName
   ) {
     this.element.createRestBtn().should("be.visible").click();
     //add created concept
@@ -80,59 +80,10 @@ class restaurantPage {
       .type(sanityTestData.subscription);
     //set email and username
     this.element.email().type(emailID);
-    this.element.emailLabel().should("be.visible").click();
     this.element.login().should("be.visible").type(loginID);
     this.element.meCheckBox().click();
     //set first name and last name
     this.element.fName().should("be.visible").clear().type(strfName);
-    this.element.lName().type(strlName);
-    //save
-    this.element.saveBtn().should("not.be.disabled").click();
-    this.element.confirmBtn().should("be.visible").click();
-    cy.wait(30000);
-    this.element.createRestBtn().should("be.visible");
-  }
-
-  createRestaurantWithoutReporting(
-    conceptName,
-    companyName,
-    restName,
-    emailID,
-    loginID,
-    strfName,
-    strlName,
-  ) {
-    this.element.createRestBtn().should("be.visible").click();
-    //add created concept
-    this.element.openConceptDD().should("be.visible").click();
-    this.element.typeTextInConceptDD().type(conceptName);
-    this.element.selectItem().click();
-    //add created company
-    this.element.openCompanyDD().click();
-    this.element.typeTextInCompanyDD().type(companyName);
-    this.element.selectItem().click();
-    //set status
-    this.element.statusRestDD();
-    //set restaurant Name
-    this.element.restaurantUnitName().type(restName, { delay: 0 });
-    this.element.selectCountry().should("have.text", "United States");
-    this.element.selectStateDD().should("be.visible").click();
-    this.element.selectStateAlabama().should("be.visible").click();
-    this.element.zipCode().type(sanityTestData.zipCode);
-    //select POS
-    this.element.openPosDD().click();
-    this.element.selectPOS().click();
-    //select Accounting
-    this.element.openAcc().click();
-    this.element.selectAcc().click();
-    //set subscription
-    this.element.subscriptionFd().type(sanityTestData.subscription);
-    //set email and username
-    this.element.email().type(emailID);
-    this.element.login().should("be.visible").type(loginID);
-    this.element.meCheckBox().click();
-    //set first name and last name
-    this.element.fName().type(strfName);
     this.element.lName().type(strlName);
     //save
     this.element.saveBtn().should("not.be.disabled").click();

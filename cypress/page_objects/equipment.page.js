@@ -2,7 +2,7 @@ class equipmentPage {
   element = {
     addNewEquipment: () => cy.get(`a[href="#/utensil/new"]`),
     nameAllergen: () => cy.get(`input[name="name"]`),
-    saveBtn: () => cy.xpath(`//*[text()='Save']`),
+    saveBtn: () => cy.xpath(`//*[text()='Save']`)
   };
 
   createEquipment(equipmentName) {

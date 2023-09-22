@@ -10,7 +10,7 @@ class priceAlertPage {
     applyRule: () => cy.get(`input[ng-model="alert.effectiveDate"]`),
     clickToday: () => cy.get(`button[ng-click="select('today', $event)"]`),
     enterPrice: () => cy.get(`input[ng-model="alert.price"]`),
-    saveBtn: () => cy.get(`button[ng-if="hasAccessToWholeCompanyConcept"]`),
+    saveBtn: () => cy.get(`button[ng-if="hasAccessToWholeCompanyConcept"]`)
   };
 
   createPriceAlert() {
